@@ -1,0 +1,955 @@
+Cache size                    : 8192
+Block size                    : 16
+Associativity                 : 1
+Read only ports               : 0
+Write only ports              : 0
+Read write ports              : 1
+Single ended read ports       : 0
+Cache banks (UCA)             : 1
+Technology                    : 0.032
+Temperature                   : 350
+Tag size                      : 42
+cache type                    : Scratch RAM
+Model as memory               : 0
+Access mode                   : 0
+Data array cell type          : 2
+Data array peripheral type    : 2
+Tag array cell type           : 2
+Tag array peripheral type     : 2
+Design objective (UCA wt)     : 0 0 50 0 50
+Design objective (UCA dev)    : 50 1000 100 1000 1000
+Design objective (NUCA wt)    : 0 0 0 0 100
+Design objective (NUCA dev)   : 0 0 0 0 100
+Cache model                   : 0
+Nuca bank                     : 0
+Wire inside mat               : 1
+Wire outside mat              : 1
+Interconnect projection       : 1
+Wire signalling               : 0
+Cores                         : 8
+Print level                   : 1
+ECC overhead                  : 1
+Page size                     : 8192
+Burst length                  : 8
+Internal prefetch width       : 8
+Force cache config            : 0
+
+---------- CACTI version 6.5, Uniform Cache Access SRAM Model ----------
+
+Cache Parameters:
+    Total cache size (bytes): 8192
+    Number of banks: 1
+    Associativity: direct mapped
+    Block size (bytes): 16
+    Read/write Ports: 1
+    Read ports: 0
+    Write ports: 0
+    Technology size (nm): 32
+
+    Access time (ns): 0.404426
+    Cycle time (ns):  0.412763
+    Total dynamic read energy per access (nJ): 0.00308377
+    Total leakage power of a bank (mW): 1.02272
+    Total dynamic write energy per access (nJ): 0.0023952
+    Cache height x width (mm): 0.0976102 x 0.178702
+
+    Best Ndwl : 2
+    Best Ndbl : 2
+    Best Nspd : 4
+    Best Ndcm : 8
+    Best Ndsam L1 : 1
+    Best Ndsam L2 : 1
+
+    Data array, H-tree wire type: Delay optimized global wires
+
+Time Components:
+
+  Data side (with Output driver) (ns): 0.404426
+	H-tree input delay (ns): 0
+	Decoder + wordline delay (ns): 0.216561
+	Bitline delay (ns): 0.111975
+	Sense Amplifier delay (ns): 0.00325135
+	H-tree output delay (ns): 0.0726385
+
+
+Power Components:
+
+  Data array: Total dynamic read energy/access  (nJ): 0.00308377
+	Total leakage read/write power of a bank (mW): 1.02272
+	Total energy in H-tree (that includes both address and data transfer) (nJ): 0
+	Output Htree Energy (nJ): 0
+	Decoder (nJ): 3.13058e-05
+	Wordline (nJ): 7.16684e-05
+	Bitline mux & associated drivers (nJ): 3.97451e-05
+	Sense amp mux & associated drivers (nJ): 0
+	Bitlines (nJ): 0.00118334
+	Sense amplifier energy (nJ): 5.17057e-05
+	Sub-array output driver (nJ): 0.00127936
+
+
+Area Components:
+
+  Data array: Area (mm2): 0.0174432
+	Height (mm): 0.0976102
+	Width (mm): 0.178702
+	Area efficiency (Memory cell area/Total area) - 56.1704 %
+		MAT Height (mm): 0.0976102
+		MAT Length (mm): 0.178702
+		Subarray Height (mm): 0.0349962
+		Subarray Length (mm): 0.0825815
+
+Wire Properties:
+
+  Delay Optimal
+	Repeater size - 122.371 
+	Repeater spacing - 0.186362 (mm) 
+	Delay - 0.130706 (ns/mm) 
+	PowerD - 0.000183134 (nJ/mm) 
+	PowerL - 0.00443502 (mW/mm)
+	Wire width - 0.064 microns
+	Wire spacing - 0.064 microns
+
+  5% Overhead
+	Repeater size - 67.3714 
+	Repeater spacing - 0.286362 (mm) 
+	Delay - 0.13713 (ns/mm) 
+	PowerD - 0.000116104 (nJ/mm) 
+	PowerL - 0.00158903 (mW/mm)
+	Wire width - 0.064 microns
+	Wire spacing - 0.064 microns
+
+  10% Overhead
+	Repeater size - 54.3714 
+	Repeater spacing - 0.286362 (mm) 
+	Delay - 0.143509 (ns/mm) 
+	PowerD - 0.000106781 (nJ/mm) 
+	PowerL - 0.00128241 (mW/mm)
+	Wire width - 0.064 microns
+	Wire spacing - 0.064 microns
+
+  20% Overhead
+	Repeater size - 52.3714 
+	Repeater spacing - 0.386362 (mm) 
+	Delay - 0.156058 (ns/mm) 
+	PowerD - 0.000101823 (nJ/mm) 
+	PowerL - 0.000915529 (mW/mm)
+	Wire width - 0.064 microns
+	Wire spacing - 0.064 microns
+
+  30% Overhead
+	Repeater size - 40.3714 
+	Repeater spacing - 0.386362 (mm) 
+	Delay - 0.169484 (ns/mm) 
+	PowerD - 9.44113e-05 (nJ/mm) 
+	PowerL - 0.000705752 (mW/mm)
+	Wire width - 0.064 microns
+	Wire spacing - 0.064 microns
+
+  Low-swing wire (1 mm) - Note: Unlike repeated wires, 
+	delay and power values of low-swing wires do not
+	have a linear relationship with length. 
+	delay - 0.130458 (ns) 
+	powerD - 7.29923e-07 (nJ) 
+	PowerL - 3.01137e-08 (mW)
+	Wire width - 1.28e-07 microns
+	Wire spacing - 1.28e-07 microns
+
+
+Connection to IPC server failed.
+Starting IPC Server. (Port = 1925)
+IPC Server started successfully.
+Using display unix:50
+                  Milkyway(TM)
+  Version G-2012.06 for RHEL64 -- May 24, 2012
+                                                  
+
+Linux 2.6.32-5-amd64 #1 SMP Sun May 6 04:00:17 UTC 2012 x86_64
+
+Host: icluster16.EECS.Berkeley.EDU (AMD.64)
+
+Copyright (C) 1991-2012 Synopsys, Inc. All rights reserved.
+Your use of this program is subject to the terms and conditions of
+a written license agreement between you, or your company, and Synopsys.
+Use the Tcl command "help about" for additional information about
+certain restrictions on your use of this software and its inputs and outputs.
+Install Path: /home/ff/cs250/tools/synopsys/mw/current
+
+Starting a non page replacement mode Milkyway db session... 
+
+Loading /home/ff/cs250/tools/synopsys/mw/current/etc/scheme/.avntrc
+#t
+ Info: loading setup file(s)
+Info: sourcing installation .synopsys_milkyway.tcl
+Info: sourced /home/ff/cs250/tools/synopsys/mw/current/etc/auxx/tcllib/astro/milkyway.tbc
+Open library "/home/ff/cs250/fa10/stdcells/synopsys-32nm/vendor/lib/stdcell_rvt/milkyway/saed32nm_rvt_1p9m" successfully.
+Change index of default color [magenta] from [51] to [55]
+Unable to set dimmed layer "10" line style to "none_@_Dim_@_"
+Technology data dumped to sram6t512x128.tempTech completely.
+All libraries closed successfully.
+Start to load technology file sram6t512x128.tempTech.
+Warning: DesignRule is defined with non-consecutive layers 'VIA1' and 'VIA1'. (line 2930) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 2930) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'VIA2' and 'VIA2'. (line 2948) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 2948) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'VIA3' and 'VIA3'. (line 2966) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 2966) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'VIA4' and 'VIA4'. (line 2984) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 2984) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'VIA5' and 'VIA5'. (line 3002) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3002) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'VIA6' and 'VIA6'. (line 3020) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3020) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'VIA7' and 'VIA7'. (line 3038) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3038) (TFCHK-014)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3166) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'NWELL' and 'PIMP'. (line 3166) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3173) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'PO' and 'DIFF'. (line 3173) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3180) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'DIFF' and 'CO'. (line 3180) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3192) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'PO' and 'CO'. (line 3192) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3199) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'PIMP' and 'NIMP'. (line 3199) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3210) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M1' and 'CO'. (line 3210) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3229) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M1' and 'VIA1'. (line 3229) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3241) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M2' and 'VIA1'. (line 3241) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3252) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M2' and 'VIA2'. (line 3252) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3263) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M3' and 'VIA2'. (line 3263) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3274) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M3' and 'VIA3'. (line 3274) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3285) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M4' and 'VIA3'. (line 3285) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3296) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M4' and 'VIA4'. (line 3296) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3307) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M5' and 'VIA4'. (line 3307) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3318) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M5' and 'VIA5'. (line 3318) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3329) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M6' and 'VIA5'. (line 3329) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3340) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M6' and 'VIA6'. (line 3340) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3351) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M7' and 'VIA6'. (line 3351) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3362) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M7' and 'VIA7'. (line 3362) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3373) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M8' and 'VIA7'. (line 3373) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3384) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M8' and 'VIA8'. (line 3384) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3395) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M9' and 'VIA8'. (line 3395) (TFCHK-080)
+Warning: DesignRule '' is missing the attribute 'stackable'. (line 3406) (TFCHK-014)
+Warning: DesignRule is defined with non-consecutive layers 'M9' and 'VIARDL'. (line 3406) (TFCHK-080)
+Warning: Layer 'M1' has a pitch 0.152 that does not match the recommended wire-to-via pitch 0.13 or 0.105. (TFCHK-049)
+Warning: Layer 'M2' has a pitch 0.152 that does not match the recommended wire-to-via pitch 0.164 or 0.139. (TFCHK-049)
+Warning: Layer 'M3' has a pitch 0.304 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M4' has a pitch 0.304 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M5' has a pitch 0.608 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M6' has a pitch 0.608 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M7' has a pitch 1.216 that does not match the recommended wire-to-via pitch 0.139. (TFCHK-049)
+Warning: Layer 'M8' has a pitch 1.216 that does not match the recommended wire-to-via pitch 0.179 or 0.164. (TFCHK-049)
+Warning: Layer 'M9' has a pitch 2.432 that does not match the recommended wire-to-via pitch 1.74. (TFCHK-049)
+Warning: Layer 'MRDL' has a pitch 4.864 that does not match the recommended wire-to-via pitch 4.5. (TFCHK-049)
+Warning: Layer 'MRDL' has a pitch 4.864 that does not match the doubled pitch 2.432 or tripled pitch 3.648. (TFCHK-050)
+Warning: CapModel sections are missing. Capacitance models should be loaded with a TLU+ file later. (TFCHK-084)
+Technology file sram6t512x128.tempTech has been loaded successfully.
+
+	>>>>>>> MILKYWAY LEF IN <<<<<<<
+
+>>> Read Cell LEF File "/scratch/cs250-ta/reference-chip/vlsi/build/generated-rams/sram6t512x128.pd.tmp/sram6t512x128.lef" ... 
+
+
+
+Starting to read LEF file ...
+Re-mark cell sram6t512x128's type as MacroCell.
+
+
+Calling LEF IN API exit handler ...
+ Done
+
+
+Read LEF completed.
+
+
+Extracting blockage/pin ... 
+
+------ new BPV starts ... -----
+Using [5 x 5] Fat Wire Table for M1
+Fat condition [0] is less than minWidth on M1
+Using [5 x 5] Fat Wire Table for M2
+Fat condition [0] is less than minWidth on M2
+Using [5 x 5] Fat Wire Table for M3
+Fat condition [0] is less than minWidth on M3
+Using [5 x 5] Fat Wire Table for M4
+Fat condition [0] is less than minWidth on M4
+Using [5 x 5] Fat Wire Table for M5
+Fat condition [0] is less than minWidth on M5
+Using [5 x 5] Fat Wire Table for M6
+Fat condition [0] is less than minWidth on M6
+Using [5 x 5] Fat Wire Table for M7
+Fat condition [0] is less than minWidth on M7
+Using [5 x 5] Fat Wire Table for M8
+Fat condition [0] is less than minWidth on M8
+Using [3 x 3] Fat Wire Table for M9
+Fat condition [0] is less than minWidth on M9
+------ new BPV starts ... -----
+Using [5 x 5] Fat Wire Table for M1
+Fat condition [0] is less than minWidth on M1
+Using [5 x 5] Fat Wire Table for M2
+Fat condition [0] is less than minWidth on M2
+Using [5 x 5] Fat Wire Table for M3
+Fat condition [0] is less than minWidth on M3
+Using [5 x 5] Fat Wire Table for M4
+Fat condition [0] is less than minWidth on M4
+Using [5 x 5] Fat Wire Table for M5
+Fat condition [0] is less than minWidth on M5
+Using [5 x 5] Fat Wire Table for M6
+Fat condition [0] is less than minWidth on M6
+Using [5 x 5] Fat Wire Table for M7
+Fat condition [0] is less than minWidth on M7
+Using [5 x 5] Fat Wire Table for M8
+Fat condition [0] is less than minWidth on M8
+Using [3 x 3] Fat Wire Table for M9
+Fat condition [0] is less than minWidth on M9
+Marking EEQ ports in each cell.
+------ new BPV starts ... -----
+Using [5 x 5] Fat Wire Table for M1
+Fat condition [0] is less than minWidth on M1
+Using [5 x 5] Fat Wire Table for M2
+Fat condition [0] is less than minWidth on M2
+Using [5 x 5] Fat Wire Table for M3
+Fat condition [0] is less than minWidth on M3
+Using [5 x 5] Fat Wire Table for M4
+Fat condition [0] is less than minWidth on M4
+Using [5 x 5] Fat Wire Table for M5
+Fat condition [0] is less than minWidth on M5
+Using [5 x 5] Fat Wire Table for M6
+Fat condition [0] is less than minWidth on M6
+Using [5 x 5] Fat Wire Table for M7
+Fat condition [0] is less than minWidth on M7
+Using [5 x 5] Fat Wire Table for M8
+Fat condition [0] is less than minWidth on M8
+Using [3 x 3] Fat Wire Table for M9
+Fat condition [0] is less than minWidth on M9
+       Processing cell [sram6t512x128_23619.CEL] ...
+(Macro Instance Object Layer) .....................
+Metal[5] pin access processing ...
+Acc-edge scanBox: [0, 0] - [177536, 5251]
+Acc-edge metal scanBox: [20672, 0] - [159448, 5251]
+Acc-edge scanBox: [172285, 0] - [177536, 97280]
+Acc-edge metal scanBox: [172285, 24320] - [177536, 85272]
+Acc-edge scanBox: [0, 92029] - [177536, 97280]
+Acc-edge metal scanBox: [5195, 92029] - [9915, 97280]
+Acc-edge scanBox: [0, 0] - [5251, 97280]
+Acc-edge metal scanBox: [0, 95280] - [7195, 97280]
+Metal[4] pin access processing ...
+Acc-edge scanBox: [0, 0] - [177536, 20728]
+Acc-edge metal scanBox: [20672, 0] - [159448, 20728]
+Acc-edge scanBox: [156808, 0] - [177536, 97280]
+Acc-edge metal scanBox: [156808, 0] - [177536, 85272]
+Acc-edge scanBox: [0, 76552] - [177536, 97280]
+Acc-edge metal scanBox: [177384, 76552] - [177536, 97280]
+Acc-edge scanBox: [0, 0] - [20728, 97280]
+Acc-edge metal scanBox: [0, 0] - [20824, 152]
+Metal[3] pin access processing ...
+Acc-edge scanBox: [0, 0] - [177536, 5251]
+Acc-edge metal scanBox: [20672, 0] - [159448, 5251]
+Acc-edge scanBox: [172285, 0] - [177536, 97280]
+Acc-edge metal scanBox: [172285, 24320] - [177536, 85272]
+Acc-edge scanBox: [0, 92029] - [177536, 97280]
+Acc-edge metal scanBox: [5195, 92029] - [9915, 97280]
+Acc-edge scanBox: [0, 0] - [5251, 97280]
+Acc-edge metal scanBox: [0, 95280] - [7195, 97280]
+Metal[2] pin access processing ...
+Acc-edge scanBox: [0, 0] - [177536, 5251]
+Acc-edge metal scanBox: [20672, 0] - [159448, 5251]
+Acc-edge scanBox: [172285, 0] - [177536, 97280]
+Acc-edge metal scanBox: [172285, 24320] - [177536, 85272]
+Acc-edge scanBox: [0, 92029] - [177536, 97280]
+Acc-edge metal scanBox: [5195, 92029] - [9915, 97280]
+Acc-edge scanBox: [0, 0] - [5251, 97280]
+Acc-edge metal scanBox: [0, 95280] - [7195, 97280]
+Made macro sram6t512x128.
+
+Load Library settings...
+WARNING : This is not a standard cell library.
+Skip setting PR boundary & defining wire track.
+
+Maximum memory usage for this session:    55.23 MB
+CPU usage for this session: 0 seconds
+Kill NullXServer PID = 27690
+Thank you for using Milkyway
+Exit AMonitor!
+Exit AServer!
+
+                           DesignWare (R)
+                        Library Compiler (TM)
+
+          Version G-2012.06-SP3 for RHEL64 -- Oct 23, 2012
+               Copyright (c) 1988-2012 Synopsys, Inc.
+
+This software and the associated documentation are confidential and 
+proprietary to Synopsys, Inc. Your use or disclosure of this software 
+is subject to the terms and conditions of a written license agreement 
+between you, or your company, and Synopsys, Inc.
+
+Initializing...
+read_lib sram6t512x128.lib
+Reading '/scratch/cs250-ta/reference-chip/vlsi/build/generated-rams/sram6t512x128.pd.tmp/sram6t512x128.lib' ...
+Warning: Line 106, Cell 'sram6t512x128', pin 'WEB1', The pin 'WEB1' does not have a internal_power group. (LBDB-607)
+Warning: Line 126, Cell 'sram6t512x128', pin 'OEB1', The pin 'OEB1' does not have a internal_power group. (LBDB-607)
+Warning: Line 146, Cell 'sram6t512x128', pin 'CSB1', The pin 'CSB1' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[8]', The pin 'A1[8]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[7]', The pin 'A1[7]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[6]', The pin 'A1[6]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[5]', The pin 'A1[5]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[4]', The pin 'A1[4]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[3]', The pin 'A1[3]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[2]', The pin 'A1[2]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[1]', The pin 'A1[1]' does not have a internal_power group. (LBDB-607)
+Warning: Line 167, Cell 'sram6t512x128', pin 'A1[0]', The pin 'A1[0]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[127]', The pin 'I1[127]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[126]', The pin 'I1[126]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[125]', The pin 'I1[125]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[124]', The pin 'I1[124]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[123]', The pin 'I1[123]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[122]', The pin 'I1[122]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[121]', The pin 'I1[121]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[120]', The pin 'I1[120]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[119]', The pin 'I1[119]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[118]', The pin 'I1[118]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[117]', The pin 'I1[117]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[116]', The pin 'I1[116]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[115]', The pin 'I1[115]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[114]', The pin 'I1[114]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[113]', The pin 'I1[113]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[112]', The pin 'I1[112]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[111]', The pin 'I1[111]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[110]', The pin 'I1[110]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[109]', The pin 'I1[109]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[108]', The pin 'I1[108]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[107]', The pin 'I1[107]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[106]', The pin 'I1[106]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[105]', The pin 'I1[105]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[104]', The pin 'I1[104]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[103]', The pin 'I1[103]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[102]', The pin 'I1[102]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[101]', The pin 'I1[101]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[100]', The pin 'I1[100]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[99]', The pin 'I1[99]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[98]', The pin 'I1[98]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[97]', The pin 'I1[97]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[96]', The pin 'I1[96]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[95]', The pin 'I1[95]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[94]', The pin 'I1[94]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[93]', The pin 'I1[93]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[92]', The pin 'I1[92]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[91]', The pin 'I1[91]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[90]', The pin 'I1[90]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[89]', The pin 'I1[89]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[88]', The pin 'I1[88]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[87]', The pin 'I1[87]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[86]', The pin 'I1[86]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[85]', The pin 'I1[85]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[84]', The pin 'I1[84]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[83]', The pin 'I1[83]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[82]', The pin 'I1[82]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[81]', The pin 'I1[81]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[80]', The pin 'I1[80]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[79]', The pin 'I1[79]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[78]', The pin 'I1[78]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[77]', The pin 'I1[77]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[76]', The pin 'I1[76]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[75]', The pin 'I1[75]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[74]', The pin 'I1[74]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[73]', The pin 'I1[73]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[72]', The pin 'I1[72]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[71]', The pin 'I1[71]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[70]', The pin 'I1[70]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[69]', The pin 'I1[69]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[68]', The pin 'I1[68]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[67]', The pin 'I1[67]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[66]', The pin 'I1[66]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[65]', The pin 'I1[65]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[64]', The pin 'I1[64]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[63]', The pin 'I1[63]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[62]', The pin 'I1[62]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[61]', The pin 'I1[61]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[60]', The pin 'I1[60]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[59]', The pin 'I1[59]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[58]', The pin 'I1[58]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[57]', The pin 'I1[57]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[56]', The pin 'I1[56]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[55]', The pin 'I1[55]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[54]', The pin 'I1[54]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[53]', The pin 'I1[53]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[52]', The pin 'I1[52]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[51]', The pin 'I1[51]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[50]', The pin 'I1[50]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[49]', The pin 'I1[49]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[48]', The pin 'I1[48]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[47]', The pin 'I1[47]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[46]', The pin 'I1[46]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[45]', The pin 'I1[45]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[44]', The pin 'I1[44]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[43]', The pin 'I1[43]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[42]', The pin 'I1[42]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[41]', The pin 'I1[41]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[40]', The pin 'I1[40]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[39]', The pin 'I1[39]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[38]', The pin 'I1[38]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[37]', The pin 'I1[37]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[36]', The pin 'I1[36]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[35]', The pin 'I1[35]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[34]', The pin 'I1[34]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[33]', The pin 'I1[33]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[32]', The pin 'I1[32]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[31]', The pin 'I1[31]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[30]', The pin 'I1[30]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[29]', The pin 'I1[29]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[28]', The pin 'I1[28]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[27]', The pin 'I1[27]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[26]', The pin 'I1[26]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[25]', The pin 'I1[25]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[24]', The pin 'I1[24]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[23]', The pin 'I1[23]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[22]', The pin 'I1[22]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[21]', The pin 'I1[21]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[20]', The pin 'I1[20]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[19]', The pin 'I1[19]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[18]', The pin 'I1[18]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[17]', The pin 'I1[17]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[16]', The pin 'I1[16]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[15]', The pin 'I1[15]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[14]', The pin 'I1[14]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[13]', The pin 'I1[13]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[12]', The pin 'I1[12]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[11]', The pin 'I1[11]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[10]', The pin 'I1[10]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[9]', The pin 'I1[9]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[8]', The pin 'I1[8]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[7]', The pin 'I1[7]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[6]', The pin 'I1[6]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[5]', The pin 'I1[5]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[4]', The pin 'I1[4]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[3]', The pin 'I1[3]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[2]', The pin 'I1[2]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[1]', The pin 'I1[1]' does not have a internal_power group. (LBDB-607)
+Warning: Line 188, Cell 'sram6t512x128', pin 'I1[0]', The pin 'I1[0]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[127]', The pin 'O1[127]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[126]', The pin 'O1[126]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[125]', The pin 'O1[125]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[124]', The pin 'O1[124]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[123]', The pin 'O1[123]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[122]', The pin 'O1[122]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[121]', The pin 'O1[121]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[120]', The pin 'O1[120]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[119]', The pin 'O1[119]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[118]', The pin 'O1[118]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[117]', The pin 'O1[117]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[116]', The pin 'O1[116]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[115]', The pin 'O1[115]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[114]', The pin 'O1[114]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[113]', The pin 'O1[113]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[112]', The pin 'O1[112]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[111]', The pin 'O1[111]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[110]', The pin 'O1[110]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[109]', The pin 'O1[109]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[108]', The pin 'O1[108]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[107]', The pin 'O1[107]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[106]', The pin 'O1[106]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[105]', The pin 'O1[105]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[104]', The pin 'O1[104]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[103]', The pin 'O1[103]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[102]', The pin 'O1[102]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[101]', The pin 'O1[101]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[100]', The pin 'O1[100]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[99]', The pin 'O1[99]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[98]', The pin 'O1[98]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[97]', The pin 'O1[97]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[96]', The pin 'O1[96]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[95]', The pin 'O1[95]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[94]', The pin 'O1[94]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[93]', The pin 'O1[93]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[92]', The pin 'O1[92]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[91]', The pin 'O1[91]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[90]', The pin 'O1[90]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[89]', The pin 'O1[89]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[88]', The pin 'O1[88]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[87]', The pin 'O1[87]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[86]', The pin 'O1[86]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[85]', The pin 'O1[85]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[84]', The pin 'O1[84]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[83]', The pin 'O1[83]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[82]', The pin 'O1[82]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[81]', The pin 'O1[81]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[80]', The pin 'O1[80]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[79]', The pin 'O1[79]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[78]', The pin 'O1[78]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[77]', The pin 'O1[77]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[76]', The pin 'O1[76]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[75]', The pin 'O1[75]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[74]', The pin 'O1[74]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[73]', The pin 'O1[73]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[72]', The pin 'O1[72]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[71]', The pin 'O1[71]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[70]', The pin 'O1[70]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[69]', The pin 'O1[69]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[68]', The pin 'O1[68]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[67]', The pin 'O1[67]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[66]', The pin 'O1[66]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[65]', The pin 'O1[65]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[64]', The pin 'O1[64]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[63]', The pin 'O1[63]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[62]', The pin 'O1[62]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[61]', The pin 'O1[61]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[60]', The pin 'O1[60]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[59]', The pin 'O1[59]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[58]', The pin 'O1[58]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[57]', The pin 'O1[57]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[56]', The pin 'O1[56]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[55]', The pin 'O1[55]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[54]', The pin 'O1[54]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[53]', The pin 'O1[53]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[52]', The pin 'O1[52]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[51]', The pin 'O1[51]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[50]', The pin 'O1[50]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[49]', The pin 'O1[49]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[48]', The pin 'O1[48]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[47]', The pin 'O1[47]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[46]', The pin 'O1[46]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[45]', The pin 'O1[45]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[44]', The pin 'O1[44]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[43]', The pin 'O1[43]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[42]', The pin 'O1[42]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[41]', The pin 'O1[41]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[40]', The pin 'O1[40]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[39]', The pin 'O1[39]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[38]', The pin 'O1[38]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[37]', The pin 'O1[37]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[36]', The pin 'O1[36]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[35]', The pin 'O1[35]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[34]', The pin 'O1[34]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[33]', The pin 'O1[33]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[32]', The pin 'O1[32]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[31]', The pin 'O1[31]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[30]', The pin 'O1[30]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[29]', The pin 'O1[29]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[28]', The pin 'O1[28]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[27]', The pin 'O1[27]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[26]', The pin 'O1[26]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[25]', The pin 'O1[25]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[24]', The pin 'O1[24]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[23]', The pin 'O1[23]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[22]', The pin 'O1[22]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[21]', The pin 'O1[21]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[20]', The pin 'O1[20]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[19]', The pin 'O1[19]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[18]', The pin 'O1[18]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[17]', The pin 'O1[17]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[16]', The pin 'O1[16]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[15]', The pin 'O1[15]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[14]', The pin 'O1[14]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[13]', The pin 'O1[13]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[12]', The pin 'O1[12]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[11]', The pin 'O1[11]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[10]', The pin 'O1[10]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[9]', The pin 'O1[9]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[8]', The pin 'O1[8]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[7]', The pin 'O1[7]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[6]', The pin 'O1[6]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[5]', The pin 'O1[5]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[4]', The pin 'O1[4]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[3]', The pin 'O1[3]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[2]', The pin 'O1[2]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[1]', The pin 'O1[1]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[0]', The pin 'O1[0]' does not have a internal_power group. (LBDB-607)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[127]', The 'O1[127]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[126]', The 'O1[126]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[125]', The 'O1[125]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[124]', The 'O1[124]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[123]', The 'O1[123]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[122]', The 'O1[122]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[121]', The 'O1[121]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[120]', The 'O1[120]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[119]', The 'O1[119]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[118]', The 'O1[118]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[117]', The 'O1[117]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[116]', The 'O1[116]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[115]', The 'O1[115]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[114]', The 'O1[114]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[113]', The 'O1[113]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[112]', The 'O1[112]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[111]', The 'O1[111]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[110]', The 'O1[110]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[109]', The 'O1[109]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[108]', The 'O1[108]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[107]', The 'O1[107]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[106]', The 'O1[106]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[105]', The 'O1[105]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[104]', The 'O1[104]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[103]', The 'O1[103]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[102]', The 'O1[102]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[101]', The 'O1[101]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[100]', The 'O1[100]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[99]', The 'O1[99]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[98]', The 'O1[98]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[97]', The 'O1[97]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[96]', The 'O1[96]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[95]', The 'O1[95]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[94]', The 'O1[94]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[93]', The 'O1[93]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[92]', The 'O1[92]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[91]', The 'O1[91]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[90]', The 'O1[90]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[89]', The 'O1[89]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[88]', The 'O1[88]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[87]', The 'O1[87]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[86]', The 'O1[86]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[85]', The 'O1[85]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[84]', The 'O1[84]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[83]', The 'O1[83]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[82]', The 'O1[82]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[81]', The 'O1[81]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[80]', The 'O1[80]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[79]', The 'O1[79]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[78]', The 'O1[78]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[77]', The 'O1[77]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[76]', The 'O1[76]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[75]', The 'O1[75]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[74]', The 'O1[74]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[73]', The 'O1[73]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[72]', The 'O1[72]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[71]', The 'O1[71]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[70]', The 'O1[70]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[69]', The 'O1[69]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[68]', The 'O1[68]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[67]', The 'O1[67]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[66]', The 'O1[66]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[65]', The 'O1[65]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[64]', The 'O1[64]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[63]', The 'O1[63]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[62]', The 'O1[62]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[61]', The 'O1[61]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[60]', The 'O1[60]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[59]', The 'O1[59]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[58]', The 'O1[58]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[57]', The 'O1[57]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[56]', The 'O1[56]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[55]', The 'O1[55]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[54]', The 'O1[54]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[53]', The 'O1[53]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[52]', The 'O1[52]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[51]', The 'O1[51]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[50]', The 'O1[50]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[49]', The 'O1[49]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[48]', The 'O1[48]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[47]', The 'O1[47]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[46]', The 'O1[46]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[45]', The 'O1[45]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[44]', The 'O1[44]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[43]', The 'O1[43]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[42]', The 'O1[42]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[41]', The 'O1[41]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[40]', The 'O1[40]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[39]', The 'O1[39]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[38]', The 'O1[38]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[37]', The 'O1[37]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[36]', The 'O1[36]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[35]', The 'O1[35]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[34]', The 'O1[34]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[33]', The 'O1[33]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[32]', The 'O1[32]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[31]', The 'O1[31]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[30]', The 'O1[30]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[29]', The 'O1[29]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[28]', The 'O1[28]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[27]', The 'O1[27]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[26]', The 'O1[26]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[25]', The 'O1[25]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[24]', The 'O1[24]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[23]', The 'O1[23]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[22]', The 'O1[22]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[21]', The 'O1[21]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[20]', The 'O1[20]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[19]', The 'O1[19]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[18]', The 'O1[18]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[17]', The 'O1[17]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[16]', The 'O1[16]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[15]', The 'O1[15]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[14]', The 'O1[14]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[13]', The 'O1[13]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[12]', The 'O1[12]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[11]', The 'O1[11]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[10]', The 'O1[10]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[9]', The 'O1[9]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[8]', The 'O1[8]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[7]', The 'O1[7]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[6]', The 'O1[6]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[5]', The 'O1[5]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[4]', The 'O1[4]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[3]', The 'O1[3]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[2]', The 'O1[2]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[1]', The 'O1[1]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 209, Cell 'sram6t512x128', pin 'O1[0]', The 'O1[0]' Pin/bus on the 'sram6t512x128' cell has no 'function' attribute.
+	The cell becomes a black box. (LIBG-16)
+Warning: Line 66, Cell 'sram6t512x128', Failed to recognize the functionality of cell 'sram6t512x128'. (LIBG-10)
+Warning: Line 57, The 'default_intrinsic_fall' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 57, The 'default_inout_pin_fall_res' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 57, The 'default_intrinsic_rise' attribute is not specified. Using 1.00. (LBDB-172)
+Warning: Line 57, The 'default_slope_rise' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 57, The 'default_output_pin_fall_res' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 57, The 'default_slope_fall' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 57, The 'default_inout_pin_rise_res' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 57, The 'default_output_pin_rise_res' attribute is not specified. Using 0.00. (LBDB-172)
+Warning: Line 57, The 'default_cell_leakage_power' attribute is not specified. Using 0.00. (LBDB-172)
+Technology library 'sram6t512x128' read successfully
+1
+write_lib sram6t512x128 -output sram6t512x128.db
+Wrote the 'sram6t512x128' library to '/scratch/cs250-ta/reference-chip/vlsi/build/generated-rams/sram6t512x128.pd.tmp/sram6t512x128.db' successfully.
+1
+exit
+
+Thank you...
+
+GENERATING /scratch/cs250-ta/reference-chip/vlsi/sram/sram6t512x128.conf
+UCB_VLSI_HOME=/home/ff/cs250
+UCB_STDCELLS=synopsys-32nm/typical_rvt
+
+Cell Width:  177.536000
+Cell Height: 97.280000
+Cell Area:   17270.702080

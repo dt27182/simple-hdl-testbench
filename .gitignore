@@ -1,0 +1,12 @@
+*~
+emulator/*
+DVEfiles
+emulator/target/*
+target/*
+*.vcd
+target/*
+src/*/target/*
+generated/*
+vlsi/build/generated-src/*
+project/target
+*.swp
