@@ -32,8 +32,8 @@ class Cpu extends Module {
   rs1 := inst(11,8)
   rs2 := inst(7,4)
   rd := inst(3,0)
-  op := inst(14,12)
-  imm := Cat(Bits(0,15), inst(31,15))
+  op := inst(15,12)
+  imm := Cat(Bits(0,16), inst(31,16))
   
   val isJmp = Bool()
   isJmp := op === UInt(6)
