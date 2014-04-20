@@ -1,6 +1,7 @@
 package FSM 
  
 import Chisel._ 
+import Common._
 import scala.collection.mutable.HashMap
 
 

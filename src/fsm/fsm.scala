@@ -1,10 +1,14 @@
 package FSM
-import Chisel._ 
+import Chisel._
+import Common._
+ 
 class TransactionMemDUT extends Module {
   val io = new Bundle {
     var addr_in = new DecoupledIO(Bits(width = 2)).flip
     var data_out = new DecoupledIO(Bits(width = 32))
+    var icache = new VarLatIO(32, 32)
   }
+  val respPending = Bool()
   val write_data = Bits()
   val write_addr = Bits(width=2)
   val write_en = Bool()
