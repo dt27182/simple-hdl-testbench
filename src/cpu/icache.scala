@@ -38,8 +38,8 @@ class TICache() extends Module
   imem(7) := Cat(Bits(9,16), Bits(6,4), Bits(0,4), Bits(15,4), Bits(0,4)) //jump to PC=9
   imem(8) := Cat(Bits(1,16), Bits(2,4), Bits(4,4), Bits(15,4), Bits(4,4)) //r4 = r4 + 1
   imem(9) := Cat(Bits(2,16), Bits(2,4), Bits(4,4), Bits(15,4), Bits(4,4)) //r4 = r4 + 2
-  imem(10) := Cat(Bits(0,16), Bits(9,4), Bits(0,4), Bits(4,4), Bits(4,4)) //M(r4) = r4
-  imem(11) := Cat(Bits(0,16), Bits(8,4), Bits(0,4), Bits(4,4), Bits(5,4)) //r5 = M(r4)
+  imem(10) := Cat(Bits(0,16), Bits(9,4), Bits(4,4), Bits(4,4), Bits(15,4)) //M(r4) = r4
+  imem(11) := Cat(Bits(0,16), Bits(8,4), Bits(4,4), Bits(15,4), Bits(5,4)) //r5 = M(r4)
   imem(12) := Cat(Bits(0,16), Bits(0,4), Bits(5,4), Bits(3,4), Bits(6,4)) //r6 = r3 + r5
   imem(13) := Cat(Bits(0,16), Bits(5,4), Bits(0,4), Bits(15,4), Bits(0,4)) //nop
   imem(14) := Cat(Bits(0,16), Bits(7,4), Bits(0,4), Bits(15,4), Bits(0,4)) //service exteral reg read

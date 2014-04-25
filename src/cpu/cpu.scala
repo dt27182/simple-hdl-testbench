@@ -2,11 +2,13 @@ package Cpu
  
 import Chisel._ 
 import scala.collection.mutable.HashMap
+import Common._
 
 class Cpu extends Module {
   val io = new Bundle { 
     val read_data = new DecoupledIO(UInt(width = 32))
     val read_addr = new DecoupledIO(Bits(width = 4)).flip()
+    val dmem_port = new VarLatIO(43,32)
   }
 
   val pc_reg = Reg(init = UInt(0,4))
@@ -92,14 +94,30 @@ class Cpu extends Module {
   //mem
   val isLoad = op === Bits(8)
   val isStore = op === Bits(9)
+  //mem req setup
+  val memWrite = Bits(width = 1)
+  memWrite := Bits(0)
+  when(isStore){
+    memWrite := Bits(1)
+  }
+  io.dmem_port.req.bits := Cat(memWrite, rs1_data(9, 0), rs2_data)
+  io.dmem_port.req.valid := isLoad | isStore
+
+  //mem resp setup
+  io.dmem_port.resp.ready := isLoad
+  when(isLoad){
+    regfile.write(rd, io.dmem_port.resp.bits)
+  }
+
+  /*
   val dmem = Mem(Bits(width = 32), 1024)
   when(isStore){
-    dmem.write(rd, rs2_data)
+    dmem.write(rs1_data, rs2_data)
   }
-  val dmem_readData = dmem.read(rs2)
+  val dmem_readData = dmem.read(rs1_data)
   when(isLoad){
     regfile.write(rd, dmem_readData)
-  }
+  }*/
 }
 
 class CpuTestBench(outputAddrs: Array[Int], inputData: Array[Int], waitCycles: Int) extends Module {
@@ -164,7 +182,10 @@ class CpuTestHarness extends Module {
   }
 
   val DUT = Module(new Cpu )
+  val DCache = Module(new DCache)
   val testBench = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
+  
+  DUT.io.dmem_port <> DCache.io.varLatIO
 
   DUT.io.read_addr <> testBench.io.read_addr
   DUT.io.read_data <> testBench.io.read_data
