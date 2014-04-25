@@ -48,7 +48,6 @@ class Cpu extends Module {
     pc_reg := jmpTarget
   }
   
-  //val regfile = Module(new TransactionMem(16, 3, 3, Array(0,1,2), 2, 1, Array(0, 0))(Bits(width = 32)))
   val regfile = Mem(Bits(width = 32), 16)
 
   val rs1_data = UInt()
@@ -72,6 +71,7 @@ class Cpu extends Module {
     operand2 := imm
   }
   
+  //alu
   val adder_out = UInt()
   val subtract_out = UInt()
   adder_out := operand1 + operand2
@@ -87,6 +87,18 @@ class Cpu extends Module {
   }
   when(subtract_sel){
     regfile.write(rd, subtract_out)
+  }
+
+  //mem
+  val isLoad = op === Bits(8)
+  val isStore = op === Bits(9)
+  val dmem = Mem(Bits(width = 32), 1024)
+  when(isStore){
+    dmem.write(rd, rs2_data)
+  }
+  val dmem_readData = dmem.read(rs2)
+  when(isLoad){
+    regfile.write(rd, dmem_readData)
   }
 }
 
@@ -152,7 +164,7 @@ class CpuTestHarness extends Module {
   }
 
   val DUT = Module(new Cpu )
-  val testBench = Module(new CpuTestBench(Array(0, 1, 2, 3, 4), Array(2, 3, 5, 3, 3), 0))
+  val testBench = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
 
   DUT.io.read_addr <> testBench.io.read_addr
   DUT.io.read_data <> testBench.io.read_data
