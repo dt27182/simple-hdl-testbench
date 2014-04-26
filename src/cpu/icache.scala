@@ -1,16 +1,12 @@
 package Cpu 
  
 import Chisel._
+import Common._
 
-class TICacheIo extends Bundle
-{
-  val req = new ValidIO(Bits(width=4)).flip()
-  val resp = Bits(OUTPUT, 32)
-}
 
-class TICache() extends Module
+class ICache() extends Module
 {
-  val io = new TICacheIo()
+  val io = new VarLatIO(4, 32).flip()
   val num_lines = 16
   val imem = Vec.fill(num_lines){Bits(width = 32)}
 
@@ -45,34 +41,12 @@ class TICache() extends Module
   imem(14) := Cat(Bits(0,16), Bits(7,4), Bits(0,4), Bits(15,4), Bits(0,4)) //service exteral reg read
   imem(15) := Cat(Bits(14,16), Bits(6,4), Bits(0,4), Bits(15,4), Bits(0,4)) //jump to PC = 14(stop execution here)
   
-  //override val req_ready = Bool(true)
   val mem_addr = io.req.bits
-  //acceptBackPressure = false
-  io.resp := imem(mem_addr)
-  //override val resp_valid = Bool(true)
+  io.resp.bits := imem(mem_addr)
+  io.resp.valid := io.req.valid
+
+  io.respPending := Bool(false)
+
+  io.req.ready := Bool(true)
 
 }
-/*
-package Hello 
- 
-import Chisel._
-
-class TICacheIo extends TransactionalBundle
-{
-  override val req = new ValidIO(Bits(width=4)).flip()
-  override val resp = Bits(OUTPUT, 32)
-}
-
-class TICache() extends TransactionalComponent
-{
-  val io = new TICacheIo()
-  val num_lines = 16
-  val imem = Mem(Bits(width = 32), num_lines)
-
-  override val req_ready = Bool(true)
-  val mem_addr = io.req.bits
-  acceptBackPressure = false
-  io.resp := imem(mem_addr)
-  override val resp_valid = Bool(true)
-
-}*/

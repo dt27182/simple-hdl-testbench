@@ -8,7 +8,6 @@ class TransactionMemDUT extends Module {
     var data_out = new DecoupledIO(Bits(width = 32))
     var icache = new VarLatIO(32, 32)
   }
-  val respPending = Bool()
   val write_data = Bits()
   val write_addr = Bits(width=2)
   val write_en = Bool()

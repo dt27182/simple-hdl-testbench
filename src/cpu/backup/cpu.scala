@@ -4,7 +4,7 @@ import Chisel._
 import scala.collection.mutable.HashMap
 import Common._
 
-/*
+
 class Cpu extends Module {
   val io = new Bundle { 
     val readData = new DecoupledIO(UInt(width = 32))
@@ -109,7 +109,7 @@ class Cpu extends Module {
     regfile.write(rd, io.dmemPort.resp.bits)
   }
 
-}*/
+}
 
 class CpuTestBench(outputAddrs: Array[Int], inputData: Array[Int], waitCycles: Int) extends Module {
   val io = new Bundle { 
