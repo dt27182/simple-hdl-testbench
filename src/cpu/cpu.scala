@@ -166,6 +166,7 @@ class CpuTestBench(outputAddrs: Array[Int], inputData: Array[Int], waitCycles: I
   }
 }
 
+/*
 class CpuTestHarness extends Module {
   val io = new Bundle {
     val passed = Bool(OUTPUT)
@@ -185,6 +186,40 @@ class CpuTestHarness extends Module {
 
   io.passed := testBench.io.passed
   io.failed := testBench.io.failed
+}*/
+
+class CpuTestHarness extends Module {
+  val io = new Bundle {
+    val passed = Bool(OUTPUT)
+    val failed = Bool(OUTPUT)
+  }
+
+  val DUT0 = Module(new Cpu )
+  val ICache0 = Module(new ICache)
+  val DCache0 = Module(new DCache)
+  val testBench0 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
+  
+  DUT0.io.imemPort <> ICache0.io
+  DUT0.io.dmemPort <> DCache0.io
+
+  DUT0.io.readAddr <> testBench0.io.readAddr
+  DUT0.io.readData <> testBench0.io.readData
+
+  val DUT1 = Module(new Cpu )
+  val ICache1 = Module(new ICache)
+  val DCache1 = Module(new DCache)
+  val testBench1 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6).reverse, Array(2, 3, 5, 3, 3, 3, 6).reverse, 0))
+  
+  DUT1.io.imemPort <> ICache1.io
+  DUT1.io.dmemPort <> DCache1.io
+
+  DUT1.io.readAddr <> testBench1.io.readAddr
+  DUT1.io.readData <> testBench1.io.readData
+
+
+
+  io.passed := testBench0.io.passed && testBench1.io.passed
+  io.failed := testBench0.io.failed || testBench1.io.failed
 }
 
 class CpuTests(c: CpuTestHarness) extends Tester(c, Array(c.io)) {

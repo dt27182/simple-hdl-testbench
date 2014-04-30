@@ -1,20 +1,19 @@
 run: copy-fsm-src
 	sbt "project fsm" "run --backend c --genHarness --compile --test --vcd --debug --targetDir emulator";vcd2vpd FSM.vcd FSM.vcd.vpd
 
-run-cpu: copy-cpu-src
-	sbt "project cpu" "run --backend c --genHarness --compile --test --vcd --debug --targetDir emulator";vcd2vpd CpuTestHarness.vcd CpuTestHarness.vcd.vpd
-
-
 copy-fsm-src: gen-src
 	cp ../simple-hdl-proj/generated/fsm.scala src/fsm/.
-
-copy-cpu-src: gen-src-cpu
-	cp ../simple-hdl-proj/generated/cpu-dut.scala src/cpu/.
 
 gen-src:
 	cd ../simple-hdl-proj && sbt "project fsm" "run"
 
-gen-src-cpu:
+run-cpu: src/cpu/cpu-dut.scala
+	sbt "project cpu" "run --backend c --genHarness --compile --test --vcd --debug --targetDir emulator";vcd2vpd CpuTestHarness.vcd CpuTestHarness.vcd.vpd
+
+src/cpu/cpu-dut.scala: ../simple-hdl-proj/generated/cpu-dut.scala
+	cp ../simple-hdl-proj/generated/cpu-dut.scala src/cpu/.
+
+../simple-hdl-proj/generated/cpu-dut.scala: ../simple-hdl-proj/src/cpu/cpu.scala ../simple-hdl-proj/src
 	cd ../simple-hdl-proj && sbt "project cpu" "run"
 
 verilog:
