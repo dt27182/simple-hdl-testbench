@@ -9,17 +9,14 @@ class DCache extends Module {
 
   val mem = Mem(Bits(width = 32), 1024)
 
-  val doWrite = io.req.bits(42)
-  val reqAddr = io.req.bits(41, 32)
-  val writeData = io.req.bits(31, 0)
+  val doWrite = io.reqBits(42)
+  val reqAddr = io.reqBits(41, 32)
+  val writeData = io.reqBits(31, 0)
 
-  when(io.req.valid && doWrite){
+  when(io.reqValid && doWrite){
     mem.write(reqAddr, writeData)
   }
 
-  io.resp.bits := mem.read(reqAddr)
-  io.resp.valid := io.req.valid && ~doWrite
-
-  io.req.ready := Bool(true)
+  io.respBits := mem.read(reqAddr)
   io.respPending := Bool(false)
 }

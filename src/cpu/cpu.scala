@@ -166,7 +166,8 @@ class CpuTestBench(outputAddrs: Array[Int], inputData: Array[Int], waitCycles: I
   }
 }
 
-/*
+//single thread testharness
+
 class CpuTestHarness extends Module {
   val io = new Bundle {
     val passed = Bool(OUTPUT)
@@ -178,17 +179,18 @@ class CpuTestHarness extends Module {
   val DCache = Module(new DCache)
   val testBench = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
   
-  DUT.io.imemPort <> ICache.io
-  DUT.io.dmemPort <> DCache.io
+  DUT.io.imemPort_0 <> ICache.io
+  DUT.io.dmemPort_0 <> DCache.io
 
-  DUT.io.readAddr <> testBench.io.readAddr
-  DUT.io.readData <> testBench.io.readData
+  DUT.io.readAddr_0 <> testBench.io.readAddr
+  DUT.io.readData_0 <> testBench.io.readData
 
   io.passed := testBench.io.passed
   io.failed := testBench.io.failed
-}*/
+}
 
-class CpuTestHarness extends Module {
+//multi-thread testharness
+/*class CpuTestHarness extends Module {
   val io = new Bundle {
     val passed = Bool(OUTPUT)
     val failed = Bool(OUTPUT)
@@ -220,7 +222,7 @@ class CpuTestHarness extends Module {
 
   io.passed := testBench0.io.passed && testBench1.io.passed
   io.failed := testBench0.io.failed || testBench1.io.failed
-}
+}*/
 
 class CpuTests(c: CpuTestHarness) extends Tester(c, Array(c.io)) {
   defTests {
