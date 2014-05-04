@@ -370,132 +370,36 @@ class Cpu extends Module {
   val AM_perStageThreadSel_stage_3_thread_3 = Bool()
   val W232 = Bool()
   val W233 = Bool()
+  val AM_iobusy_readData_0 = Bool()
   val W234 = Bool()
-  val AM_RAW_hazard_0_pcReg_0_stage_1_writeNum_0 = Bool()
   val W235 = Bool()
   val W236 = Bool()
+  val AM_iobusy_readData_1 = Bool()
   val W237 = Bool()
-  val AM_RAW_hazard_1_pcReg_0_stage_2_writeNum_0 = Bool()
   val W238 = Bool()
   val W239 = Bool()
+  val AM_iobusy_readData_2 = Bool()
   val W240 = Bool()
-  val AM_RAW_hazard_2_pcReg_0_stage_3_writeNum_0 = Bool()
   val W241 = Bool()
   val W242 = Bool()
+  val AM_iobusy_readData_3 = Bool()
   val W243 = Bool()
-  val AM_RAW_hazard_3_pcReg_0_stage_1_writeNum_1 = Bool()
   val W244 = Bool()
   val W245 = Bool()
+  val AM_iobusy_readAddr_0 = Bool()
   val W246 = Bool()
-  val AM_RAW_hazard_4_pcReg_0_stage_2_writeNum_1 = Bool()
   val W247 = Bool()
   val W248 = Bool()
+  val AM_iobusy_readAddr_1 = Bool()
   val W249 = Bool()
-  val AM_RAW_hazard_5_pcReg_0_stage_3_writeNum_1 = Bool()
   val W250 = Bool()
-  val W251 = Bits()
+  val W251 = Bool()
+  val AM_iobusy_readAddr_2 = Bool()
   val W252 = Bool()
   val W253 = Bool()
   val W254 = Bool()
-  val W255 = Bool()
-  val W256 = Bool()
-  val AM_RAW_hazard_6_regfile_0_readNum_0_stage_3_writeNum_0 = Bool()
-  val W257 = Bool()
-  val W258 = Bits()
-  val W259 = Bool()
-  val W260 = Bool()
-  val W261 = Bool()
-  val W262 = Bool()
-  val W263 = Bool()
-  val AM_RAW_hazard_7_regfile_0_readNum_1_stage_3_writeNum_0 = Bool()
-  val W264 = Bool()
-  val W265 = Bits()
-  val W266 = Bool()
-  val W267 = Bool()
-  val W268 = Bool()
-  val W269 = Bool()
-  val W270 = Bool()
-  val AM_RAW_hazard_8_regfile_0_readNum_2_stage_3_writeNum_0 = Bool()
-  val W271 = Bool()
-  val W272 = Bits()
-  val W273 = Bool()
-  val W274 = Bool()
-  val W275 = Bool()
-  val W276 = Bool()
-  val W277 = Bool()
-  val AM_RAW_hazard_9_regfile_0_readNum_0_stage_3_writeNum_1 = Bool()
-  val W278 = Bool()
-  val W279 = Bits()
-  val W280 = Bool()
-  val W281 = Bool()
-  val W282 = Bool()
-  val W283 = Bool()
-  val W284 = Bool()
-  val AM_RAW_hazard_10_regfile_0_readNum_1_stage_3_writeNum_1 = Bool()
-  val W285 = Bool()
-  val W286 = Bits()
-  val W287 = Bool()
-  val W288 = Bool()
-  val W289 = Bool()
-  val W290 = Bool()
-  val W291 = Bool()
-  val AM_RAW_hazard_11_regfile_0_readNum_2_stage_3_writeNum_1 = Bool()
-  val W292 = Bool()
-  val W293 = Bits()
-  val W294 = Bool()
-  val W295 = Bool()
-  val W296 = Bool()
-  val W297 = Bool()
-  val W298 = Bool()
-  val AM_RAW_hazard_12_regfile_0_readNum_0_stage_3_writeNum_2 = Bool()
-  val W299 = Bool()
-  val W300 = Bits()
-  val W301 = Bool()
-  val W302 = Bool()
-  val W303 = Bool()
-  val W304 = Bool()
-  val W305 = Bool()
-  val AM_RAW_hazard_13_regfile_0_readNum_1_stage_3_writeNum_2 = Bool()
-  val W306 = Bool()
-  val W307 = Bits()
-  val W308 = Bool()
-  val W309 = Bool()
-  val W310 = Bool()
-  val W311 = Bool()
-  val W312 = Bool()
-  val AM_RAW_hazard_14_regfile_0_readNum_2_stage_3_writeNum_2 = Bool()
-  val W313 = Bool()
-  val W314 = Bool()
-  val AM_iobusy_readData_0 = Bool()
-  val W315 = Bool()
-  val W316 = Bool()
-  val W317 = Bool()
-  val AM_iobusy_readData_1 = Bool()
-  val W318 = Bool()
-  val W319 = Bool()
-  val W320 = Bool()
-  val AM_iobusy_readData_2 = Bool()
-  val W321 = Bool()
-  val W322 = Bool()
-  val W323 = Bool()
-  val AM_iobusy_readData_3 = Bool()
-  val W324 = Bool()
-  val W325 = Bool()
-  val W326 = Bool()
-  val AM_iobusy_readAddr_0 = Bool()
-  val W327 = Bool()
-  val W328 = Bool()
-  val W329 = Bool()
-  val AM_iobusy_readAddr_1 = Bool()
-  val W330 = Bool()
-  val W331 = Bool()
-  val W332 = Bool()
-  val AM_iobusy_readAddr_2 = Bool()
-  val W333 = Bool()
-  val W334 = Bool()
-  val W335 = Bool()
   val AM_iobusy_readAddr_3 = Bool()
-  val W336 = Bool()
+  val W255 = Bool()
   val AM_varLatIO_busy_imemPort_0 = Bool()
   val AM_varLatIO_busy_imemPort_1 = Bool()
   val AM_varLatIO_busy_imemPort_2 = Bool()
@@ -504,6 +408,102 @@ class Cpu extends Module {
   val AM_varLatIO_busy_dmemPort_1 = Bool()
   val AM_varLatIO_busy_dmemPort_2 = Bool()
   val AM_varLatIO_busy_dmemPort_3 = Bool()
+  val W256 = Bool()
+  val W257 = Bool()
+  val W258 = Bool()
+  val AM_RAW_hazard_0_pcReg_0_stage_1_writeNum_0 = Bool()
+  val W259 = Bool()
+  val W260 = Bool()
+  val W261 = Bool()
+  val AM_RAW_hazard_1_pcReg_0_stage_2_writeNum_0 = Bool()
+  val W262 = Bool()
+  val W263 = Bool()
+  val W264 = Bool()
+  val AM_RAW_hazard_2_pcReg_0_stage_3_writeNum_0 = Bool()
+  val W265 = Bool()
+  val W266 = Bool()
+  val W267 = Bool()
+  val AM_RAW_hazard_3_pcReg_0_stage_1_writeNum_1 = Bool()
+  val W268 = Bool()
+  val W269 = Bool()
+  val W270 = Bool()
+  val AM_RAW_hazard_4_pcReg_0_stage_2_writeNum_1 = Bool()
+  val W271 = Bool()
+  val W272 = Bool()
+  val W273 = Bool()
+  val AM_RAW_hazard_5_pcReg_0_stage_3_writeNum_1 = Bool()
+  val W274 = Bool()
+  val W275 = Bits()
+  val W276 = Bool()
+  val W277 = Bool()
+  val W278 = Bool()
+  val W279 = Bool()
+  val W280 = Bool()
+  val AM_RAW_hazard_6_regfile_0_readNum_0_stage_3_writeNum_0 = Bool()
+  val W281 = Bool()
+  val W282 = Bits()
+  val W283 = Bool()
+  val W284 = Bool()
+  val W285 = Bool()
+  val W286 = Bool()
+  val W287 = Bool()
+  val AM_RAW_hazard_7_regfile_0_readNum_1_stage_3_writeNum_0 = Bool()
+  val W288 = Bool()
+  val W289 = Bits()
+  val W290 = Bool()
+  val W291 = Bool()
+  val W292 = Bool()
+  val W293 = Bool()
+  val W294 = Bool()
+  val AM_RAW_hazard_8_regfile_0_readNum_2_stage_3_writeNum_0 = Bool()
+  val W295 = Bool()
+  val W296 = Bits()
+  val W297 = Bool()
+  val W298 = Bool()
+  val W299 = Bool()
+  val W300 = Bool()
+  val W301 = Bool()
+  val AM_RAW_hazard_9_regfile_0_readNum_0_stage_3_writeNum_1 = Bool()
+  val W302 = Bool()
+  val W303 = Bits()
+  val W304 = Bool()
+  val W305 = Bool()
+  val W306 = Bool()
+  val W307 = Bool()
+  val W308 = Bool()
+  val AM_RAW_hazard_10_regfile_0_readNum_1_stage_3_writeNum_1 = Bool()
+  val W309 = Bool()
+  val W310 = Bits()
+  val W311 = Bool()
+  val W312 = Bool()
+  val W313 = Bool()
+  val W314 = Bool()
+  val W315 = Bool()
+  val AM_RAW_hazard_11_regfile_0_readNum_2_stage_3_writeNum_1 = Bool()
+  val W316 = Bool()
+  val W317 = Bits()
+  val W318 = Bool()
+  val W319 = Bool()
+  val W320 = Bool()
+  val W321 = Bool()
+  val W322 = Bool()
+  val AM_RAW_hazard_12_regfile_0_readNum_0_stage_3_writeNum_2 = Bool()
+  val W323 = Bool()
+  val W324 = Bits()
+  val W325 = Bool()
+  val W326 = Bool()
+  val W327 = Bool()
+  val W328 = Bool()
+  val W329 = Bool()
+  val AM_RAW_hazard_13_regfile_0_readNum_1_stage_3_writeNum_2 = Bool()
+  val W330 = Bool()
+  val W331 = Bits()
+  val W332 = Bool()
+  val W333 = Bool()
+  val W334 = Bool()
+  val W335 = Bool()
+  val W336 = Bool()
+  val AM_RAW_hazard_14_regfile_0_readNum_2_stage_3_writeNum_2 = Bool()
   val W337 = Bool()
   val W338 = Bool()
   val W339 = Bool()
@@ -842,6 +842,24 @@ class Cpu extends Module {
   val W672 = Bool()
   val W673 = Bool()
   val W674 = Bool()
+  val W675 = Bool()
+  val W676 = Bool()
+  val W677 = Bool()
+  val W678 = Bool()
+  val W679 = Bool()
+  val W680 = Bool()
+  val W681 = Bool()
+  val W682 = Bool()
+  val W683 = Bool()
+  val W684 = Bool()
+  val W685 = Bool()
+  val W686 = Bool()
+  val W687 = Bool()
+  val W688 = Bool()
+  val W689 = Bool()
+  val W690 = Bool()
+  val W691 = Bool()
+  val W692 = Bool()
   val AM_regWEn_pcReg_0_thread_0_writeNum_0 = Bool()
   val AM_regWEn_pcReg_0_thread_0_writeNum_1 = Bool()
   val AM_regWEn_pcReg_0_thread_1_writeNum_0 = Bool()
@@ -862,24 +880,6 @@ class Cpu extends Module {
   val AM_memWEn_regfile_0_thread_3_writeNum_0 = Bool()
   val AM_memWEn_regfile_0_thread_3_writeNum_1 = Bool()
   val AM_memWEn_regfile_0_thread_3_writeNum_2 = Bool()
-  val W675 = Bool()
-  val W676 = Bool()
-  val W677 = Bool()
-  val W678 = Bool()
-  val W679 = Bool()
-  val W680 = Bool()
-  val W681 = Bool()
-  val W682 = Bool()
-  val W683 = Bool()
-  val W684 = Bool()
-  val W685 = Bool()
-  val W686 = Bool()
-  val W687 = Bool()
-  val W688 = Bool()
-  val W689 = Bool()
-  val W690 = Bool()
-  val W691 = Bool()
-  val W692 = Bool()
   val W693 = Bool()
   val W694 = Bool()
   val W695 = Bool()
@@ -894,6 +894,24 @@ class Cpu extends Module {
   val W704 = Bool()
   val W705 = Bool()
   val W706 = Bool()
+  val W707 = Bool()
+  val W708 = Bool()
+  val W709 = Bool()
+  val W710 = Bool()
+  val W711 = Bool()
+  val W712 = Bool()
+  val W713 = Bool()
+  val W714 = Bool()
+  val W715 = Bool()
+  val W716 = Bool()
+  val W717 = Bool()
+  val W718 = Bool()
+  val W719 = Bool()
+  val W720 = Bool()
+  val W721 = Bool()
+  val W722 = Bool()
+  val W723 = Bool()
+  val W724 = Bool()
   W0 := Bits(1, width = 4)
   pcSpec := AM_reg_mux_pcReg_0 + W0
   W1 := Bits(1, width = 4)
@@ -1119,102 +1137,30 @@ class Cpu extends Module {
   AM_perStageThreadSel_stage_3_thread_2 := AM_stage_thread_sel_id_3 === W230
   W231 := Bits(3, width = 3)
   AM_perStageThreadSel_stage_3_thread_3 := AM_stage_thread_sel_id_3 === W231
-  W233 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_1
-  W234 := W232 & W233
-  AM_RAW_hazard_0_pcReg_0_stage_1_writeNum_0 := AM_stage_valid_1 & W234
-  W236 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_2
-  W237 := W235 & W236
-  AM_RAW_hazard_1_pcReg_0_stage_2_writeNum_0 := AM_stage_valid_2 & W237
-  W239 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_3
-  W240 := W238 & W239
-  AM_RAW_hazard_2_pcReg_0_stage_3_writeNum_0 := AM_stage_valid_3 & W240
-  W242 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_1
-  W243 := W241 & W242
-  AM_RAW_hazard_3_pcReg_0_stage_1_writeNum_1 := AM_stage_valid_1 & W243
-  W245 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_2
-  W246 := W244 & W245
-  AM_RAW_hazard_4_pcReg_0_stage_2_writeNum_1 := AM_stage_valid_2 & W246
-  W248 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_3
-  W249 := W247 & W248
-  AM_RAW_hazard_5_pcReg_0_stage_3_writeNum_1 := AM_stage_valid_3 & W249
-  W252 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W253 := AM_stage_valid_3 & W252
-  W254 := AM_pipe_reg_14_stage_1 === W251
-  W255 := W5 & W254
-  W256 := W250 & W255
-  AM_RAW_hazard_6_regfile_0_readNum_0_stage_3_writeNum_0 := W253 & W256
-  W259 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W260 := AM_stage_valid_3 & W259
-  W261 := AM_pipe_reg_15_stage_1 === W258
-  W262 := W6 & W261
-  W263 := W257 & W262
-  AM_RAW_hazard_7_regfile_0_readNum_1_stage_3_writeNum_0 := W260 & W263
-  W266 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W267 := AM_stage_valid_3 & W266
-  W268 := AM_inputIO_bits_mux_readAddr_0 === W265
-  W269 := W7 & W268
-  W270 := W264 & W269
-  AM_RAW_hazard_8_regfile_0_readNum_2_stage_3_writeNum_0 := W267 & W270
-  W273 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W274 := AM_stage_valid_3 & W273
-  W275 := AM_pipe_reg_14_stage_1 === W272
-  W276 := W5 & W275
-  W277 := W271 & W276
-  AM_RAW_hazard_9_regfile_0_readNum_0_stage_3_writeNum_1 := W274 & W277
-  W280 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W281 := AM_stage_valid_3 & W280
-  W282 := AM_pipe_reg_15_stage_1 === W279
-  W283 := W6 & W282
-  W284 := W278 & W283
-  AM_RAW_hazard_10_regfile_0_readNum_1_stage_3_writeNum_1 := W281 & W284
-  W287 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W288 := AM_stage_valid_3 & W287
-  W289 := AM_inputIO_bits_mux_readAddr_0 === W286
-  W290 := W7 & W289
-  W291 := W285 & W290
-  AM_RAW_hazard_11_regfile_0_readNum_2_stage_3_writeNum_1 := W288 & W291
-  W294 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W295 := AM_stage_valid_3 & W294
-  W296 := AM_pipe_reg_14_stage_1 === W293
-  W297 := W5 & W296
-  W298 := W292 & W297
-  AM_RAW_hazard_12_regfile_0_readNum_0_stage_3_writeNum_2 := W295 & W298
-  W301 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W302 := AM_stage_valid_3 & W301
-  W303 := AM_pipe_reg_15_stage_1 === W300
-  W304 := W6 & W303
-  W305 := W299 & W304
-  AM_RAW_hazard_13_regfile_0_readNum_1_stage_3_writeNum_2 := W302 & W305
-  W308 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
-  W309 := AM_stage_valid_3 & W308
-  W310 := AM_inputIO_bits_mux_readAddr_0 === W307
-  W311 := W7 & W310
-  W312 := W306 & W311
-  AM_RAW_hazard_14_regfile_0_readNum_2_stage_3_writeNum_2 := W309 & W312
-  W314 := ~ io.readData_0.ready
-  AM_iobusy_readData_0 := W313 & W314
-  W315 := AM_perStageThreadSel_stage_3_thread_0 & AM_iobusy_readData_0
-  W317 := ~ io.readData_1.ready
-  AM_iobusy_readData_1 := W316 & W317
-  W318 := AM_perStageThreadSel_stage_3_thread_1 & AM_iobusy_readData_1
-  W320 := ~ io.readData_2.ready
-  AM_iobusy_readData_2 := W319 & W320
-  W321 := AM_perStageThreadSel_stage_3_thread_2 & AM_iobusy_readData_2
-  W323 := ~ io.readData_3.ready
-  AM_iobusy_readData_3 := W322 & W323
-  W324 := AM_perStageThreadSel_stage_3_thread_3 & AM_iobusy_readData_3
-  W326 := ~ io.readAddr_0.valid
-  AM_iobusy_readAddr_0 := W326 & W325
-  W327 := AM_perStageThreadSel_stage_2_thread_0 & AM_iobusy_readAddr_0
-  W329 := ~ io.readAddr_1.valid
-  AM_iobusy_readAddr_1 := W329 & W328
-  W330 := AM_perStageThreadSel_stage_2_thread_1 & AM_iobusy_readAddr_1
-  W332 := ~ io.readAddr_2.valid
-  AM_iobusy_readAddr_2 := W332 & W331
-  W333 := AM_perStageThreadSel_stage_2_thread_2 & AM_iobusy_readAddr_2
-  W335 := ~ io.readAddr_3.valid
-  AM_iobusy_readAddr_3 := W335 & W334
-  W336 := AM_perStageThreadSel_stage_2_thread_3 & AM_iobusy_readAddr_3
+  W233 := ~ io.readData_0.ready
+  AM_iobusy_readData_0 := W232 & W233
+  W234 := AM_perStageThreadSel_stage_3_thread_0 & AM_iobusy_readData_0
+  W236 := ~ io.readData_1.ready
+  AM_iobusy_readData_1 := W235 & W236
+  W237 := AM_perStageThreadSel_stage_3_thread_1 & AM_iobusy_readData_1
+  W239 := ~ io.readData_2.ready
+  AM_iobusy_readData_2 := W238 & W239
+  W240 := AM_perStageThreadSel_stage_3_thread_2 & AM_iobusy_readData_2
+  W242 := ~ io.readData_3.ready
+  AM_iobusy_readData_3 := W241 & W242
+  W243 := AM_perStageThreadSel_stage_3_thread_3 & AM_iobusy_readData_3
+  W245 := ~ io.readAddr_0.valid
+  AM_iobusy_readAddr_0 := W245 & W244
+  W246 := AM_perStageThreadSel_stage_2_thread_0 & AM_iobusy_readAddr_0
+  W248 := ~ io.readAddr_1.valid
+  AM_iobusy_readAddr_1 := W248 & W247
+  W249 := AM_perStageThreadSel_stage_2_thread_1 & AM_iobusy_readAddr_1
+  W251 := ~ io.readAddr_2.valid
+  AM_iobusy_readAddr_2 := W251 & W250
+  W252 := AM_perStageThreadSel_stage_2_thread_2 & AM_iobusy_readAddr_2
+  W254 := ~ io.readAddr_3.valid
+  AM_iobusy_readAddr_3 := W254 & W253
+  W255 := AM_perStageThreadSel_stage_2_thread_3 & AM_iobusy_readAddr_3
   AM_varLatIO_busy_imemPort_0 := io.imemPort_0.respPending & AM_perStageThreadSel_stage_0_thread_0
   AM_varLatIO_busy_imemPort_1 := io.imemPort_1.respPending & AM_perStageThreadSel_stage_0_thread_1
   AM_varLatIO_busy_imemPort_2 := io.imemPort_2.respPending & AM_perStageThreadSel_stage_0_thread_2
@@ -1223,38 +1169,110 @@ class Cpu extends Module {
   AM_varLatIO_busy_dmemPort_1 := io.dmemPort_1.respPending & AM_perStageThreadSel_stage_3_thread_1
   AM_varLatIO_busy_dmemPort_2 := io.dmemPort_2.respPending & AM_perStageThreadSel_stage_3_thread_2
   AM_varLatIO_busy_dmemPort_3 := io.dmemPort_3.respPending & AM_perStageThreadSel_stage_3_thread_3
+  W257 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_1
+  W258 := W256 & W257
+  AM_RAW_hazard_0_pcReg_0_stage_1_writeNum_0 := AM_stage_valid_1 & W258
+  W260 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_2
+  W261 := W259 & W260
+  AM_RAW_hazard_1_pcReg_0_stage_2_writeNum_0 := AM_stage_valid_2 & W261
+  W263 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_3
+  W264 := W262 & W263
+  AM_RAW_hazard_2_pcReg_0_stage_3_writeNum_0 := AM_stage_valid_3 & W264
+  W266 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_1
+  W267 := W265 & W266
+  AM_RAW_hazard_3_pcReg_0_stage_1_writeNum_1 := AM_stage_valid_1 & W267
+  W269 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_2
+  W270 := W268 & W269
+  AM_RAW_hazard_4_pcReg_0_stage_2_writeNum_1 := AM_stage_valid_2 & W270
+  W272 := AM_stage_thread_sel_id_0 === AM_stage_thread_sel_id_3
+  W273 := W271 & W272
+  AM_RAW_hazard_5_pcReg_0_stage_3_writeNum_1 := AM_stage_valid_3 & W273
+  W276 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W277 := AM_stage_valid_3 & W276
+  W278 := AM_pipe_reg_14_stage_1 === W275
+  W279 := W5 & W278
+  W280 := W274 & W279
+  AM_RAW_hazard_6_regfile_0_readNum_0_stage_3_writeNum_0 := W277 & W280
+  W283 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W284 := AM_stage_valid_3 & W283
+  W285 := AM_pipe_reg_15_stage_1 === W282
+  W286 := W6 & W285
+  W287 := W281 & W286
+  AM_RAW_hazard_7_regfile_0_readNum_1_stage_3_writeNum_0 := W284 & W287
+  W290 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W291 := AM_stage_valid_3 & W290
+  W292 := AM_inputIO_bits_mux_readAddr_0 === W289
+  W293 := W7 & W292
+  W294 := W288 & W293
+  AM_RAW_hazard_8_regfile_0_readNum_2_stage_3_writeNum_0 := W291 & W294
+  W297 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W298 := AM_stage_valid_3 & W297
+  W299 := AM_pipe_reg_14_stage_1 === W296
+  W300 := W5 & W299
+  W301 := W295 & W300
+  AM_RAW_hazard_9_regfile_0_readNum_0_stage_3_writeNum_1 := W298 & W301
+  W304 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W305 := AM_stage_valid_3 & W304
+  W306 := AM_pipe_reg_15_stage_1 === W303
+  W307 := W6 & W306
+  W308 := W302 & W307
+  AM_RAW_hazard_10_regfile_0_readNum_1_stage_3_writeNum_1 := W305 & W308
+  W311 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W312 := AM_stage_valid_3 & W311
+  W313 := AM_inputIO_bits_mux_readAddr_0 === W310
+  W314 := W7 & W313
+  W315 := W309 & W314
+  AM_RAW_hazard_11_regfile_0_readNum_2_stage_3_writeNum_1 := W312 & W315
+  W318 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W319 := AM_stage_valid_3 & W318
+  W320 := AM_pipe_reg_14_stage_1 === W317
+  W321 := W5 & W320
+  W322 := W316 & W321
+  AM_RAW_hazard_12_regfile_0_readNum_0_stage_3_writeNum_2 := W319 & W322
+  W325 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W326 := AM_stage_valid_3 & W325
+  W327 := AM_pipe_reg_15_stage_1 === W324
+  W328 := W6 & W327
+  W329 := W323 & W328
+  AM_RAW_hazard_13_regfile_0_readNum_1_stage_3_writeNum_2 := W326 & W329
+  W332 := AM_stage_thread_sel_id_2 === AM_stage_thread_sel_id_3
+  W333 := AM_stage_valid_3 & W332
+  W334 := AM_inputIO_bits_mux_readAddr_0 === W331
+  W335 := W7 & W334
+  W336 := W330 & W335
+  AM_RAW_hazard_14_regfile_0_readNum_2_stage_3_writeNum_2 := W333 & W336
   W337 := Bool(true)
   W338 := ~ AM_RAW_hazard_2_pcReg_0_stage_3_writeNum_0
   W339 := W337 & W338
-  W340 := ~ AM_RAW_hazard_1_pcReg_0_stage_2_writeNum_0
+  W340 := ~ AM_RAW_hazard_0_pcReg_0_stage_1_writeNum_0
   W341 := W339 & W340
-  W342 := ~ AM_RAW_hazard_5_pcReg_0_stage_3_writeNum_1
+  W342 := ~ AM_RAW_hazard_3_pcReg_0_stage_1_writeNum_1
   W343 := W341 & W342
   W344 := ~ AM_RAW_hazard_4_pcReg_0_stage_2_writeNum_1
   W345 := W343 & W344
-  W346 := ~ AM_RAW_hazard_0_pcReg_0_stage_1_writeNum_0
+  W346 := ~ AM_RAW_hazard_5_pcReg_0_stage_3_writeNum_1
   W347 := W345 & W346
-  W348 := ~ AM_RAW_hazard_3_pcReg_0_stage_1_writeNum_1
+  W348 := ~ AM_RAW_hazard_1_pcReg_0_stage_2_writeNum_0
   W349 := W347 & W348
   AM_stage_NoRAW_0 := W349
   W350 := Bool(true)
   AM_stage_NoRAW_1 := W350
   W351 := Bool(true)
-  W352 := ~ AM_RAW_hazard_9_regfile_0_readNum_0_stage_3_writeNum_1
+  W352 := ~ AM_RAW_hazard_7_regfile_0_readNum_1_stage_3_writeNum_0
   W353 := W351 & W352
-  W354 := ~ AM_RAW_hazard_8_regfile_0_readNum_2_stage_3_writeNum_0
+  W354 := ~ AM_RAW_hazard_12_regfile_0_readNum_0_stage_3_writeNum_2
   W355 := W353 & W354
-  W356 := ~ AM_RAW_hazard_7_regfile_0_readNum_1_stage_3_writeNum_0
+  W356 := ~ AM_RAW_hazard_14_regfile_0_readNum_2_stage_3_writeNum_2
   W357 := W355 & W356
-  W358 := ~ AM_RAW_hazard_11_regfile_0_readNum_2_stage_3_writeNum_1
+  W358 := ~ AM_RAW_hazard_13_regfile_0_readNum_1_stage_3_writeNum_2
   W359 := W357 & W358
-  W360 := ~ AM_RAW_hazard_10_regfile_0_readNum_1_stage_3_writeNum_1
+  W360 := ~ AM_RAW_hazard_8_regfile_0_readNum_2_stage_3_writeNum_0
   W361 := W359 & W360
-  W362 := ~ AM_RAW_hazard_14_regfile_0_readNum_2_stage_3_writeNum_2
+  W362 := ~ AM_RAW_hazard_10_regfile_0_readNum_1_stage_3_writeNum_1
   W363 := W361 & W362
-  W364 := ~ AM_RAW_hazard_13_regfile_0_readNum_1_stage_3_writeNum_2
+  W364 := ~ AM_RAW_hazard_9_regfile_0_readNum_0_stage_3_writeNum_1
   W365 := W363 & W364
-  W366 := ~ AM_RAW_hazard_12_regfile_0_readNum_0_stage_3_writeNum_2
+  W366 := ~ AM_RAW_hazard_11_regfile_0_readNum_2_stage_3_writeNum_1
   W367 := W365 & W366
   W368 := ~ AM_RAW_hazard_6_regfile_0_readNum_0_stage_3_writeNum_0
   W369 := W367 & W368
@@ -1266,81 +1284,81 @@ class Cpu extends Module {
   W372 := Bool(true)
   AM_stage_NoIOBusy_1 := W372
   W373 := Bool(true)
-  W374 := ~ W330
+  W374 := ~ W252
   W375 := W373 & W374
-  W376 := ~ W327
+  W376 := ~ W249
   W377 := W375 & W376
-  W378 := ~ W336
+  W378 := ~ W255
   W379 := W377 & W378
-  W380 := ~ W333
+  W380 := ~ W246
   W381 := W379 & W380
   AM_stage_NoIOBusy_2 := W381
   W382 := Bool(true)
-  W383 := ~ W321
+  W383 := ~ W237
   W384 := W382 & W383
-  W385 := ~ W315
+  W385 := ~ W243
   W386 := W384 & W385
-  W387 := ~ W324
+  W387 := ~ W234
   W388 := W386 & W387
-  W389 := ~ W318
+  W389 := ~ W240
   W390 := W388 & W389
   AM_stage_NoIOBusy_3 := W390
-  W391 := ~ AM_stage_kill_0
-  W392 := W32 & W391
-  W393 := AM_stage_NoRAW_0 & AM_stage_NoIOBusy_0
-  W394 := W392 & W393
-  AM_stage_valid_0 := W394
-  W395 := ~ AM_stage_kill_1
-  W396 := AM_prev_stage_valid_reg1 & W395
-  W397 := AM_stage_NoRAW_1 & AM_stage_NoIOBusy_1
-  W398 := W396 & W397
-  AM_stage_valid_1 := W398
-  W399 := ~ AM_stage_kill_2
-  W400 := AM_prev_stage_valid_reg2 & W399
-  W401 := AM_stage_NoRAW_2 & AM_stage_NoIOBusy_2
-  W402 := W400 & W401
-  AM_stage_valid_2 := W402
-  W403 := ~ AM_stage_kill_3
-  W404 := AM_prev_stage_valid_reg3 & W403
-  W405 := AM_stage_NoRAW_3 & AM_stage_NoIOBusy_3
+  W391 := Bool(false)
+  W392 := W391 | AM_varLatIO_busy_imemPort_0
+  W393 := W392 | AM_varLatIO_busy_imemPort_1
+  W394 := W393 | AM_varLatIO_busy_imemPort_2
+  W395 := W394 | AM_varLatIO_busy_imemPort_3
+  AM_stage_kill_0 := W395
+  W396 := Bool(false)
+  AM_stage_kill_1 := W396
+  W397 := Bool(false)
+  AM_stage_kill_2 := W397
+  W398 := Bool(false)
+  W399 := W398 | AM_varLatIO_busy_dmemPort_0
+  W400 := W399 | AM_varLatIO_busy_dmemPort_1
+  W401 := W400 | AM_varLatIO_busy_dmemPort_2
+  W402 := W401 | AM_varLatIO_busy_dmemPort_3
+  AM_stage_kill_3 := W402
+  W403 := ~ AM_stage_kill_0
+  W404 := W32 & W403
+  W405 := AM_stage_NoRAW_0 & AM_stage_NoIOBusy_0
   W406 := W404 & W405
-  AM_stage_valid_3 := W406
-  W407 := Bool(false)
-  AM_stage_stall_3 := W407
-  W408 := ~ AM_stage_NoRAW_1
-  W409 := ~ AM_stage_NoIOBusy_1
-  W410 := W408 | W409
-  W411 := AM_prev_stage_valid_reg1 & W410
-  W412 := AM_stage_stall_1 | W411
-  AM_stage_stall_0 := W412
-  W413 := ~ AM_stage_NoRAW_2
-  W414 := ~ AM_stage_NoIOBusy_2
-  W415 := W413 | W414
-  W416 := AM_prev_stage_valid_reg2 & W415
-  W417 := AM_stage_stall_2 | W416
-  AM_stage_stall_1 := W417
-  W418 := ~ AM_stage_NoRAW_3
-  W419 := ~ AM_stage_NoIOBusy_3
-  W420 := W418 | W419
-  W421 := AM_prev_stage_valid_reg3 & W420
-  W422 := AM_stage_stall_3 | W421
-  AM_stage_stall_2 := W422
-  W423 := Bool(false)
-  W424 := W423 | AM_varLatIO_busy_imemPort_0
-  W425 := W424 | AM_varLatIO_busy_imemPort_1
-  W426 := W425 | AM_varLatIO_busy_imemPort_2
-  W427 := W426 | AM_varLatIO_busy_imemPort_3
-  AM_stage_kill_0 := W427
-  W428 := Bool(false)
-  AM_stage_kill_1 := W428
-  W429 := Bool(false)
-  AM_stage_kill_2 := W429
-  W430 := Bool(false)
-  W431 := W430 | AM_varLatIO_busy_dmemPort_0
-  W432 := W431 | AM_varLatIO_busy_dmemPort_1
-  W433 := W432 | AM_varLatIO_busy_dmemPort_2
-  W434 := W433 | AM_varLatIO_busy_dmemPort_3
-  AM_stage_kill_3 := W434
+  AM_stage_valid_0 := W406
+  W407 := ~ AM_stage_kill_1
+  W408 := AM_prev_stage_valid_reg1 & W407
+  W409 := AM_stage_NoRAW_1 & AM_stage_NoIOBusy_1
+  W410 := W408 & W409
+  AM_stage_valid_1 := W410
+  W411 := ~ AM_stage_kill_2
+  W412 := AM_prev_stage_valid_reg2 & W411
+  W413 := AM_stage_NoRAW_2 & AM_stage_NoIOBusy_2
+  W414 := W412 & W413
+  AM_stage_valid_2 := W414
+  W415 := ~ AM_stage_kill_3
+  W416 := AM_prev_stage_valid_reg3 & W415
+  W417 := AM_stage_NoRAW_3 & AM_stage_NoIOBusy_3
+  W418 := W416 & W417
+  AM_stage_valid_3 := W418
+  W419 := Bool(false)
+  AM_stage_stall_3 := W419
+  W420 := ~ AM_stage_NoRAW_1
+  W421 := ~ AM_stage_NoIOBusy_1
+  W422 := W420 | W421
+  W423 := AM_prev_stage_valid_reg1 & W422
+  W424 := AM_stage_stall_1 | W423
+  AM_stage_stall_0 := W424
+  W425 := ~ AM_stage_NoRAW_2
+  W426 := ~ AM_stage_NoIOBusy_2
+  W427 := W425 | W426
+  W428 := AM_prev_stage_valid_reg2 & W427
+  W429 := AM_stage_stall_2 | W428
+  AM_stage_stall_1 := W429
+  W430 := ~ AM_stage_NoRAW_3
+  W431 := ~ AM_stage_NoIOBusy_3
+  W432 := W430 | W431
+  W433 := AM_prev_stage_valid_reg3 & W432
+  W434 := AM_stage_stall_3 | W433
+  AM_stage_stall_2 := W434
   W435 := isNotJmp & AM_stage_valid_3
   W436 := isJmp & AM_stage_valid_3
   W437 := isNotJmp & AM_stage_valid_3
@@ -1361,236 +1379,246 @@ class Cpu extends Module {
   W452 := adderSel & AM_stage_valid_3
   W453 := subtractSel & AM_stage_valid_3
   W454 := AM_pipe_reg_0_stage_2 & AM_stage_valid_3
-  W455 := ~ AM_stage_kill_3
-  W456 := AM_prev_stage_valid_reg3 & W455
-  W457 := AM_stage_NoRAW_3 & W456
-  W459 := W458 & W457
-  W461 := W460 & W457
-  W463 := W462 & W457
-  W465 := W464 & W457
-  W466 := ~ AM_stage_kill_2
-  W467 := AM_prev_stage_valid_reg2 & W466
-  W468 := AM_stage_NoRAW_2 & W467
-  W470 := W469 & W468
-  W472 := W471 & W468
-  W474 := W473 & W468
-  W476 := W475 & W468
-  W477 := W32 & AM_stage_NoIOBusy_0
-  W478 := AM_stage_NoRAW_0 & W477
-  W480 := W479 & W478
-  W482 := W481 & W478
-  W484 := W483 & W478
-  W486 := W485 & W478
-  W487 := AM_prev_stage_valid_reg3 & AM_stage_NoIOBusy_3
-  W488 := AM_stage_NoRAW_3 & W487
-  W490 := W489 & W488
-  W492 := W491 & W488
-  W494 := W493 & W488
-  W496 := W495 & W488
-  W497 := W212 & AM_stage_valid_0
-  W498 := W214 & AM_stage_valid_0
-  W499 := ~ AM_stage_stall_3
-  W500 := W435 & W499
-  W501 := ~ AM_stage_stall_3
-  W502 := W436 & W501
-  W503 := ~ AM_stage_stall_3
-  W504 := W437 & W503
-  W505 := ~ AM_stage_stall_3
-  W506 := W438 & W505
-  W507 := ~ AM_stage_stall_3
-  W508 := W439 & W507
-  W509 := ~ AM_stage_stall_3
-  W510 := W440 & W509
-  W511 := ~ AM_stage_stall_3
-  W512 := W441 & W511
-  W513 := ~ AM_stage_stall_3
-  W514 := W442 & W513
-  W515 := ~ AM_stage_stall_3
-  W516 := W443 & W515
+  W455 := AM_stage_NoRAW_3 & AM_prev_stage_valid_reg3
+  W457 := W456 & W455
+  W459 := W458 & W455
+  W461 := W460 & W455
+  W463 := W462 & W455
+  W464 := AM_stage_NoRAW_2 & AM_prev_stage_valid_reg2
+  W466 := W465 & W464
+  W468 := W467 & W464
+  W470 := W469 & W464
+  W472 := W471 & W464
+  W473 := AM_stage_NoRAW_0 & W32
+  W475 := W474 & W473
+  W477 := W476 & W473
+  W479 := W478 & W473
+  W481 := W480 & W473
+  W482 := AM_stage_NoRAW_3 & AM_prev_stage_valid_reg3
+  W484 := W483 & W482
+  W486 := W485 & W482
+  W488 := W487 & W482
+  W490 := W489 & W482
+  W491 := ~ AM_varLatIO_busy_dmemPort_0
+  W493 := W492 & W491
+  W494 := ~ W234
+  W496 := W495 & W494
+  W497 := ~ AM_varLatIO_busy_dmemPort_1
+  W499 := W498 & W497
+  W500 := ~ W237
+  W502 := W501 & W500
+  W503 := ~ AM_varLatIO_busy_dmemPort_2
+  W505 := W504 & W503
+  W506 := ~ W240
+  W508 := W507 & W506
+  W509 := ~ AM_varLatIO_busy_dmemPort_3
+  W511 := W510 & W509
+  W512 := ~ W243
+  W514 := W513 & W512
+  W515 := W212 & AM_stage_valid_0
+  W516 := W214 & AM_stage_valid_0
   W517 := ~ AM_stage_stall_3
-  W518 := W444 & W517
+  W518 := W435 & W517
   W519 := ~ AM_stage_stall_3
-  W520 := W445 & W519
+  W520 := W436 & W519
   W521 := ~ AM_stage_stall_3
-  W522 := W446 & W521
+  W522 := W437 & W521
   W523 := ~ AM_stage_stall_3
-  W524 := W447 & W523
+  W524 := W438 & W523
   W525 := ~ AM_stage_stall_3
-  W526 := W448 & W525
+  W526 := W439 & W525
   W527 := ~ AM_stage_stall_3
-  W528 := W449 & W527
+  W528 := W440 & W527
   W529 := ~ AM_stage_stall_3
-  W530 := W450 & W529
+  W530 := W441 & W529
   W531 := ~ AM_stage_stall_3
-  W532 := W451 & W531
+  W532 := W442 & W531
   W533 := ~ AM_stage_stall_3
-  W534 := W452 & W533
+  W534 := W443 & W533
   W535 := ~ AM_stage_stall_3
-  W536 := W453 & W535
+  W536 := W444 & W535
   W537 := ~ AM_stage_stall_3
-  W538 := W454 & W537
+  W538 := W445 & W537
   W539 := ~ AM_stage_stall_3
-  W541 := W540 & W539
-  W542 := ~ AM_stage_stall_3
-  W544 := W543 & W542
+  W540 := W446 & W539
+  W541 := ~ AM_stage_stall_3
+  W542 := W447 & W541
+  W543 := ~ AM_stage_stall_3
+  W544 := W448 & W543
   W545 := ~ AM_stage_stall_3
-  W547 := W546 & W545
-  W548 := ~ AM_stage_stall_3
-  W550 := W549 & W548
-  W551 := ~ AM_stage_stall_2
-  W553 := W552 & W551
-  W554 := ~ AM_stage_stall_2
-  W556 := W555 & W554
-  W557 := ~ AM_stage_stall_2
+  W546 := W449 & W545
+  W547 := ~ AM_stage_stall_3
+  W548 := W450 & W547
+  W549 := ~ AM_stage_stall_3
+  W550 := W451 & W549
+  W551 := ~ AM_stage_stall_3
+  W552 := W452 & W551
+  W553 := ~ AM_stage_stall_3
+  W554 := W453 & W553
+  W555 := ~ AM_stage_stall_3
+  W556 := W454 & W555
+  W557 := ~ AM_stage_stall_3
   W559 := W558 & W557
-  W560 := ~ AM_stage_stall_2
+  W560 := ~ AM_stage_stall_3
   W562 := W561 & W560
-  W563 := ~ AM_stage_stall_0
+  W563 := ~ AM_stage_stall_3
   W565 := W564 & W563
-  W566 := ~ AM_stage_stall_0
+  W566 := ~ AM_stage_stall_3
   W568 := W567 & W566
-  W569 := ~ AM_stage_stall_0
+  W569 := ~ AM_stage_stall_2
   W571 := W570 & W569
-  W572 := ~ AM_stage_stall_0
+  W572 := ~ AM_stage_stall_2
   W574 := W573 & W572
-  W575 := ~ AM_stage_stall_3
+  W575 := ~ AM_stage_stall_2
   W577 := W576 & W575
-  W578 := ~ AM_stage_stall_3
+  W578 := ~ AM_stage_stall_2
   W580 := W579 & W578
-  W581 := ~ AM_stage_stall_3
+  W581 := ~ AM_stage_stall_0
   W583 := W582 & W581
-  W584 := ~ AM_stage_stall_3
+  W584 := ~ AM_stage_stall_0
   W586 := W585 & W584
   W587 := ~ AM_stage_stall_0
-  W588 := W48 & W587
-  W589 := ~ AM_stage_stall_0
-  W590 := W78 & W589
-  W591 := ~ AM_stage_stall_1
-  W592 := W49 & W591
-  W593 := ~ AM_stage_stall_1
-  W594 := W62 & W593
-  W595 := ~ AM_stage_stall_1
-  W596 := W66 & W595
-  W597 := ~ AM_stage_stall_1
-  W598 := W68 & W597
-  W599 := ~ AM_stage_stall_1
-  W600 := W70 & W599
-  W601 := ~ AM_stage_stall_1
-  W602 := W72 & W601
-  W603 := ~ AM_stage_stall_1
-  W604 := W74 & W603
-  W605 := ~ AM_stage_stall_1
-  W606 := W76 & W605
-  W607 := ~ AM_stage_stall_1
-  W608 := W82 & W607
+  W589 := W588 & W587
+  W590 := ~ AM_stage_stall_0
+  W592 := W591 & W590
+  W593 := ~ AM_stage_stall_3
+  W595 := W594 & W593
+  W596 := ~ AM_stage_stall_3
+  W598 := W597 & W596
+  W599 := ~ AM_stage_stall_3
+  W601 := W600 & W599
+  W602 := ~ AM_stage_stall_3
+  W604 := W603 & W602
+  W605 := ~ AM_stage_stall_0
+  W606 := W48 & W605
+  W607 := ~ AM_stage_stall_0
+  W608 := W78 & W607
   W609 := ~ AM_stage_stall_1
-  W610 := W84 & W609
+  W610 := W49 & W609
   W611 := ~ AM_stage_stall_1
-  W612 := W96 & W611
+  W612 := W62 & W611
   W613 := ~ AM_stage_stall_1
-  W614 := W98 & W613
+  W614 := W66 & W613
   W615 := ~ AM_stage_stall_1
-  W616 := W100 & W615
+  W616 := W68 & W615
   W617 := ~ AM_stage_stall_1
-  W618 := W102 & W617
+  W618 := W70 & W617
   W619 := ~ AM_stage_stall_1
-  W620 := W104 & W619
+  W620 := W72 & W619
   W621 := ~ AM_stage_stall_1
-  W622 := W106 & W621
+  W622 := W74 & W621
   W623 := ~ AM_stage_stall_1
-  W624 := W108 & W623
-  W625 := ~ AM_stage_stall_2
-  W626 := W40 & W625
-  W627 := ~ AM_stage_stall_2
-  W628 := W42 & W627
-  W629 := ~ AM_stage_stall_2
-  W630 := W44 & W629
-  W631 := ~ AM_stage_stall_2
-  W632 := W46 & W631
-  W633 := ~ AM_stage_stall_2
-  W634 := W50 & W633
-  W635 := ~ AM_stage_stall_2
-  W636 := W52 & W635
-  W637 := ~ AM_stage_stall_2
-  W638 := W54 & W637
-  W639 := ~ AM_stage_stall_2
-  W640 := W56 & W639
-  W641 := ~ AM_stage_stall_2
-  W642 := W58 & W641
+  W624 := W76 & W623
+  W625 := ~ AM_stage_stall_1
+  W626 := W82 & W625
+  W627 := ~ AM_stage_stall_1
+  W628 := W84 & W627
+  W629 := ~ AM_stage_stall_1
+  W630 := W96 & W629
+  W631 := ~ AM_stage_stall_1
+  W632 := W98 & W631
+  W633 := ~ AM_stage_stall_1
+  W634 := W100 & W633
+  W635 := ~ AM_stage_stall_1
+  W636 := W102 & W635
+  W637 := ~ AM_stage_stall_1
+  W638 := W104 & W637
+  W639 := ~ AM_stage_stall_1
+  W640 := W106 & W639
+  W641 := ~ AM_stage_stall_1
+  W642 := W108 & W641
   W643 := ~ AM_stage_stall_2
-  W644 := W60 & W643
+  W644 := W40 & W643
   W645 := ~ AM_stage_stall_2
-  W646 := W64 & W645
+  W646 := W42 & W645
   W647 := ~ AM_stage_stall_2
-  W648 := W80 & W647
+  W648 := W44 & W647
   W649 := ~ AM_stage_stall_2
-  W650 := W86 & W649
+  W650 := W46 & W649
   W651 := ~ AM_stage_stall_2
-  W652 := W88 & W651
+  W652 := W50 & W651
   W653 := ~ AM_stage_stall_2
-  W654 := W90 & W653
+  W654 := W52 & W653
   W655 := ~ AM_stage_stall_2
-  W656 := W92 & W655
+  W656 := W54 & W655
   W657 := ~ AM_stage_stall_2
-  W658 := W94 & W657
-  W659 := ~ AM_stage_stall_0
-  W660 := W33 & W659
-  W661 := ~ AM_stage_stall_1
-  W662 := W34 & W661
+  W658 := W56 & W657
+  W659 := ~ AM_stage_stall_2
+  W660 := W58 & W659
+  W661 := ~ AM_stage_stall_2
+  W662 := W60 & W661
   W663 := ~ AM_stage_stall_2
-  W664 := W35 & W663
-  W665 := ~ AM_stage_stall_0
-  W666 := W36 & W665
-  W667 := ~ AM_stage_stall_1
-  W668 := W37 & W667
+  W664 := W64 & W663
+  W665 := ~ AM_stage_stall_2
+  W666 := W80 & W665
+  W667 := ~ AM_stage_stall_2
+  W668 := W86 & W667
   W669 := ~ AM_stage_stall_2
-  W670 := W38 & W669
-  W671 := ~ AM_stage_stall_0
-  W672 := W497 & W671
-  W673 := ~ AM_stage_stall_0
-  W674 := W498 & W673
-  AM_regWEn_pcReg_0_thread_0_writeNum_0 := W500 & AM_perStageThreadSel_stage_3_thread_0
-  AM_regWEn_pcReg_0_thread_0_writeNum_1 := W502 & AM_perStageThreadSel_stage_3_thread_0
-  AM_regWEn_pcReg_0_thread_1_writeNum_0 := W504 & AM_perStageThreadSel_stage_3_thread_1
-  AM_regWEn_pcReg_0_thread_1_writeNum_1 := W506 & AM_perStageThreadSel_stage_3_thread_1
-  AM_regWEn_pcReg_0_thread_2_writeNum_0 := W508 & AM_perStageThreadSel_stage_3_thread_2
-  AM_regWEn_pcReg_0_thread_2_writeNum_1 := W510 & AM_perStageThreadSel_stage_3_thread_2
-  AM_regWEn_pcReg_0_thread_3_writeNum_0 := W512 & AM_perStageThreadSel_stage_3_thread_3
-  AM_regWEn_pcReg_0_thread_3_writeNum_1 := W514 & AM_perStageThreadSel_stage_3_thread_3
-  AM_memWEn_regfile_0_thread_0_writeNum_0 := W516 & AM_perStageThreadSel_stage_3_thread_0
-  AM_memWEn_regfile_0_thread_0_writeNum_1 := W518 & AM_perStageThreadSel_stage_3_thread_0
-  AM_memWEn_regfile_0_thread_0_writeNum_2 := W520 & AM_perStageThreadSel_stage_3_thread_0
-  AM_memWEn_regfile_0_thread_1_writeNum_0 := W522 & AM_perStageThreadSel_stage_3_thread_1
-  AM_memWEn_regfile_0_thread_1_writeNum_1 := W524 & AM_perStageThreadSel_stage_3_thread_1
-  AM_memWEn_regfile_0_thread_1_writeNum_2 := W526 & AM_perStageThreadSel_stage_3_thread_1
-  AM_memWEn_regfile_0_thread_2_writeNum_0 := W528 & AM_perStageThreadSel_stage_3_thread_2
-  AM_memWEn_regfile_0_thread_2_writeNum_1 := W530 & AM_perStageThreadSel_stage_3_thread_2
-  AM_memWEn_regfile_0_thread_2_writeNum_2 := W532 & AM_perStageThreadSel_stage_3_thread_2
-  AM_memWEn_regfile_0_thread_3_writeNum_0 := W534 & AM_perStageThreadSel_stage_3_thread_3
-  AM_memWEn_regfile_0_thread_3_writeNum_1 := W536 & AM_perStageThreadSel_stage_3_thread_3
-  AM_memWEn_regfile_0_thread_3_writeNum_2 := W538 & AM_perStageThreadSel_stage_3_thread_3
-  W676 := W675 & AM_perStageThreadSel_stage_3_thread_0
-  W678 := W677 & AM_perStageThreadSel_stage_3_thread_1
-  W680 := W679 & AM_perStageThreadSel_stage_3_thread_2
-  W682 := W681 & AM_perStageThreadSel_stage_3_thread_3
-  W684 := W683 & AM_perStageThreadSel_stage_2_thread_0
-  W686 := W685 & AM_perStageThreadSel_stage_2_thread_1
-  W688 := W687 & AM_perStageThreadSel_stage_2_thread_2
-  W690 := W689 & AM_perStageThreadSel_stage_2_thread_3
-  W692 := W691 & AM_perStageThreadSel_stage_0_thread_0
-  W694 := W693 & AM_perStageThreadSel_stage_0_thread_1
-  W696 := W695 & AM_perStageThreadSel_stage_0_thread_2
-  W698 := W697 & AM_perStageThreadSel_stage_0_thread_3
-  W700 := W699 & AM_perStageThreadSel_stage_3_thread_0
-  W702 := W701 & AM_perStageThreadSel_stage_3_thread_1
-  W704 := W703 & AM_perStageThreadSel_stage_3_thread_2
-  W706 := W705 & AM_perStageThreadSel_stage_3_thread_3
-  io.readData_0.valid := W676
+  W670 := W88 & W669
+  W671 := ~ AM_stage_stall_2
+  W672 := W90 & W671
+  W673 := ~ AM_stage_stall_2
+  W674 := W92 & W673
+  W675 := ~ AM_stage_stall_2
+  W676 := W94 & W675
+  W677 := ~ AM_stage_stall_0
+  W678 := W33 & W677
+  W679 := ~ AM_stage_stall_1
+  W680 := W34 & W679
+  W681 := ~ AM_stage_stall_2
+  W682 := W35 & W681
+  W683 := ~ AM_stage_stall_0
+  W684 := W36 & W683
+  W685 := ~ AM_stage_stall_1
+  W686 := W37 & W685
+  W687 := ~ AM_stage_stall_2
+  W688 := W38 & W687
+  W689 := ~ AM_stage_stall_0
+  W690 := W515 & W689
+  W691 := ~ AM_stage_stall_0
+  W692 := W516 & W691
+  AM_regWEn_pcReg_0_thread_0_writeNum_0 := W518 & AM_perStageThreadSel_stage_3_thread_0
+  AM_regWEn_pcReg_0_thread_0_writeNum_1 := W520 & AM_perStageThreadSel_stage_3_thread_0
+  AM_regWEn_pcReg_0_thread_1_writeNum_0 := W522 & AM_perStageThreadSel_stage_3_thread_1
+  AM_regWEn_pcReg_0_thread_1_writeNum_1 := W524 & AM_perStageThreadSel_stage_3_thread_1
+  AM_regWEn_pcReg_0_thread_2_writeNum_0 := W526 & AM_perStageThreadSel_stage_3_thread_2
+  AM_regWEn_pcReg_0_thread_2_writeNum_1 := W528 & AM_perStageThreadSel_stage_3_thread_2
+  AM_regWEn_pcReg_0_thread_3_writeNum_0 := W530 & AM_perStageThreadSel_stage_3_thread_3
+  AM_regWEn_pcReg_0_thread_3_writeNum_1 := W532 & AM_perStageThreadSel_stage_3_thread_3
+  AM_memWEn_regfile_0_thread_0_writeNum_0 := W534 & AM_perStageThreadSel_stage_3_thread_0
+  AM_memWEn_regfile_0_thread_0_writeNum_1 := W536 & AM_perStageThreadSel_stage_3_thread_0
+  AM_memWEn_regfile_0_thread_0_writeNum_2 := W538 & AM_perStageThreadSel_stage_3_thread_0
+  AM_memWEn_regfile_0_thread_1_writeNum_0 := W540 & AM_perStageThreadSel_stage_3_thread_1
+  AM_memWEn_regfile_0_thread_1_writeNum_1 := W542 & AM_perStageThreadSel_stage_3_thread_1
+  AM_memWEn_regfile_0_thread_1_writeNum_2 := W544 & AM_perStageThreadSel_stage_3_thread_1
+  AM_memWEn_regfile_0_thread_2_writeNum_0 := W546 & AM_perStageThreadSel_stage_3_thread_2
+  AM_memWEn_regfile_0_thread_2_writeNum_1 := W548 & AM_perStageThreadSel_stage_3_thread_2
+  AM_memWEn_regfile_0_thread_2_writeNum_2 := W550 & AM_perStageThreadSel_stage_3_thread_2
+  AM_memWEn_regfile_0_thread_3_writeNum_0 := W552 & AM_perStageThreadSel_stage_3_thread_3
+  AM_memWEn_regfile_0_thread_3_writeNum_1 := W554 & AM_perStageThreadSel_stage_3_thread_3
+  AM_memWEn_regfile_0_thread_3_writeNum_2 := W556 & AM_perStageThreadSel_stage_3_thread_3
+  W694 := W693 & AM_perStageThreadSel_stage_3_thread_0
+  W696 := W695 & AM_perStageThreadSel_stage_3_thread_1
+  W698 := W697 & AM_perStageThreadSel_stage_3_thread_2
+  W700 := W699 & AM_perStageThreadSel_stage_3_thread_3
+  W702 := W701 & AM_perStageThreadSel_stage_2_thread_0
+  W704 := W703 & AM_perStageThreadSel_stage_2_thread_1
+  W706 := W705 & AM_perStageThreadSel_stage_2_thread_2
+  W708 := W707 & AM_perStageThreadSel_stage_2_thread_3
+  W710 := W709 & AM_perStageThreadSel_stage_0_thread_0
+  W712 := W711 & AM_perStageThreadSel_stage_0_thread_1
+  W714 := W713 & AM_perStageThreadSel_stage_0_thread_2
+  W716 := W715 & AM_perStageThreadSel_stage_0_thread_3
+  W718 := W717 & AM_perStageThreadSel_stage_3_thread_0
+  W720 := W719 & AM_perStageThreadSel_stage_3_thread_1
+  W722 := W721 & AM_perStageThreadSel_stage_3_thread_2
+  W724 := W723 & AM_perStageThreadSel_stage_3_thread_3
+  io.readData_0.valid := W694
   io.readData_0.bits := W110
-  io.readAddr_0.ready := W684
-  io.imemPort_0.reqValid := W692
+  io.readAddr_0.ready := W702
+  io.imemPort_0.reqValid := W710
   io.imemPort_0.reqBits := W117
-  io.dmemPort_0.reqValid := W700
+  io.dmemPort_0.reqValid := W718
   io.dmemPort_0.reqBits := W123
   AM_regWData_pcReg_0_thread_3_writeNum_0 := AM_pipe_reg_6_stage_2pcPlus4
   inst := AM_pipe_reg_20_stage_0inst
@@ -1623,26 +1651,26 @@ class Cpu extends Module {
   W97 := op
   W105 := op
   W107 := op
-  io.readData_1.valid := W678
+  io.readData_1.valid := W696
   io.readData_1.bits := W110
-  io.readData_2.valid := W680
+  io.readData_2.valid := W698
   io.readData_2.bits := W110
-  io.readData_3.valid := W682
+  io.readData_3.valid := W700
   io.readData_3.bits := W110
-  io.readAddr_1.ready := W686
-  io.readAddr_2.ready := W688
-  io.readAddr_3.ready := W690
-  io.imemPort_1.reqValid := W694
+  io.readAddr_1.ready := W704
+  io.readAddr_2.ready := W706
+  io.readAddr_3.ready := W708
+  io.imemPort_1.reqValid := W712
   io.imemPort_1.reqBits := W113
-  io.imemPort_2.reqValid := W696
+  io.imemPort_2.reqValid := W714
   io.imemPort_2.reqBits := W115
-  io.imemPort_3.reqValid := W698
+  io.imemPort_3.reqValid := W716
   io.imemPort_3.reqBits := W117
-  io.dmemPort_1.reqValid := W702
+  io.dmemPort_1.reqValid := W720
   io.dmemPort_1.reqBits := W119
-  io.dmemPort_2.reqValid := W704
+  io.dmemPort_2.reqValid := W722
   io.dmemPort_2.reqBits := W121
-  io.dmemPort_3.reqValid := W706
+  io.dmemPort_3.reqValid := W724
   io.dmemPort_3.reqBits := W123
   W109 := AM_pipe_reg_1_stage_2valid
   W110 := AM_pipe_reg_2_stage_2bits
@@ -1655,86 +1683,94 @@ class Cpu extends Module {
   W121 := W119
   W122 := W120
   W123 := W121
-  W232 := W45
-  W235 := W45
-  W238 := isNotJmp
-  W241 := W51
-  W244 := W51
-  W247 := isJmp
-  W250 := adderSel
-  W251 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W257 := adderSel
-  W258 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W264 := adderSel
-  W265 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W271 := subtractSel
-  W272 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W278 := subtractSel
-  W279 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W285 := subtractSel
-  W286 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W292 := AM_pipe_reg_0_stage_2
-  W293 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W299 := AM_pipe_reg_0_stage_2
-  W300 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W306 := AM_pipe_reg_0_stage_2
-  W307 := AM_memWAddr_regfile_0_thread_3_writeNum_2
-  W313 := W109
-  W316 := W109
-  W319 := W109
-  W322 := W109
-  W325 := W111
-  W328 := W111
-  W331 := W111
-  W334 := W111
-  W458 := W313
-  W460 := W316
-  W462 := W319
-  W464 := W322
-  W469 := W325
-  W471 := W328
-  W473 := W331
-  W475 := W334
-  W479 := W116
-  W481 := W112
-  W483 := W114
-  W485 := W116
+  W232 := W109
+  W235 := W109
+  W238 := W109
+  W241 := W109
+  W244 := W111
+  W247 := W111
+  W250 := W111
+  W253 := W111
+  W256 := W45
+  W259 := W45
+  W262 := isNotJmp
+  W265 := W51
+  W268 := W51
+  W271 := isJmp
+  W274 := adderSel
+  W275 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W281 := adderSel
+  W282 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W288 := adderSel
+  W289 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W295 := subtractSel
+  W296 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W302 := subtractSel
+  W303 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W309 := subtractSel
+  W310 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W316 := AM_pipe_reg_0_stage_2
+  W317 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W323 := AM_pipe_reg_0_stage_2
+  W324 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W330 := AM_pipe_reg_0_stage_2
+  W331 := AM_memWAddr_regfile_0_thread_3_writeNum_2
+  W456 := W232
+  W458 := W235
+  W460 := W238
+  W462 := W241
+  W465 := W244
+  W467 := W247
+  W469 := W250
+  W471 := W253
+  W474 := W116
+  W476 := W112
+  W478 := W114
+  W480 := W116
+  W483 := W122
+  W485 := W118
+  W487 := W120
   W489 := W122
-  W491 := W118
-  W493 := W120
-  W495 := W122
-  W540 := W459
-  W543 := W461
-  W546 := W463
-  W549 := W465
-  W552 := W470
-  W555 := W472
-  W558 := W474
-  W561 := W476
-  W564 := W480
-  W567 := W482
-  W570 := W484
-  W573 := W486
-  W576 := W490
-  W579 := W492
-  W582 := W494
-  W585 := W496
-  W675 := W541
-  W677 := W544
-  W679 := W547
-  W681 := W550
-  W683 := W553
-  W685 := W556
-  W687 := W559
-  W689 := W562
-  W691 := W565
-  W693 := W568
-  W695 := W571
-  W697 := W574
-  W699 := W577
-  W701 := W580
-  W703 := W583
-  W705 := W586
+  W492 := W457
+  W495 := W484
+  W498 := W493
+  W501 := W496
+  W504 := W499
+  W507 := W502
+  W510 := W505
+  W513 := W508
+  W558 := W511
+  W561 := W459
+  W564 := W461
+  W567 := W463
+  W570 := W466
+  W573 := W468
+  W576 := W470
+  W579 := W472
+  W582 := W475
+  W585 := W477
+  W588 := W479
+  W591 := W481
+  W594 := W514
+  W597 := W486
+  W600 := W488
+  W603 := W490
+  W693 := W559
+  W695 := W562
+  W697 := W565
+  W699 := W568
+  W701 := W571
+  W703 := W574
+  W705 := W577
+  W707 := W580
+  W709 := W583
+  W711 := W586
+  W713 := W589
+  W715 := W592
+  W717 := W595
+  W719 := W598
+  W721 := W601
+  W723 := W604
   val pcReg_0_reg = Reg(init = Bits(0, width = 4))
   pcReg_0 := pcReg_0_reg
   when(AM_regWEn_pcReg_0_thread_0_writeNum_0){
@@ -1758,212 +1794,212 @@ class Cpu extends Module {
   }
   val AM_prev_stage_valid_reg1_reg = Reg(init = Bool(false))
   AM_prev_stage_valid_reg1 := AM_prev_stage_valid_reg1_reg
-  when(W660){
+  when(W678){
     AM_prev_stage_valid_reg1_reg := AM_stage_valid_0
   }
   val AM_prev_stage_valid_reg2_reg = Reg(init = Bool(false))
   AM_prev_stage_valid_reg2 := AM_prev_stage_valid_reg2_reg
-  when(W662){
+  when(W680){
     AM_prev_stage_valid_reg2_reg := AM_stage_valid_1
   }
   val AM_prev_stage_valid_reg3_reg = Reg(init = Bool(false))
   AM_prev_stage_valid_reg3 := AM_prev_stage_valid_reg3_reg
-  when(W664){
+  when(W682){
     AM_prev_stage_valid_reg3_reg := AM_stage_valid_2
   }
   val AM_stage_thread_sel_id_1_reg = Reg(init = Bits(0, width = 3))
   AM_stage_thread_sel_id_1 := AM_stage_thread_sel_id_1_reg
-  when(W666){
+  when(W684){
     AM_stage_thread_sel_id_1_reg := AM_stage_thread_sel_id_0
   }
   val AM_stage_thread_sel_id_2_reg = Reg(init = Bits(0, width = 3))
   AM_stage_thread_sel_id_2 := AM_stage_thread_sel_id_2_reg
-  when(W668){
+  when(W686){
     AM_stage_thread_sel_id_2_reg := AM_stage_thread_sel_id_1
   }
   val AM_stage_thread_sel_id_3_reg = Reg(init = Bits(0, width = 3))
   AM_stage_thread_sel_id_3 := AM_stage_thread_sel_id_3_reg
-  when(W670){
+  when(W688){
     AM_stage_thread_sel_id_3_reg := AM_stage_thread_sel_id_2
   }
   val AM_pipe_reg_0_stage_2_reg = Reg(init = Bool(false))
   AM_pipe_reg_0_stage_2 := AM_pipe_reg_0_stage_2_reg
-  when(W626){
+  when(W644){
     AM_pipe_reg_0_stage_2_reg := W39
   }
   val AM_pipe_reg_1_stage_2valid_reg = Reg(init = Bool(false))
   AM_pipe_reg_1_stage_2valid := AM_pipe_reg_1_stage_2valid_reg
-  when(W628){
+  when(W646){
     AM_pipe_reg_1_stage_2valid_reg := W41
   }
   val AM_pipe_reg_2_stage_2bits_reg = Reg(init = Bits(1))
   AM_pipe_reg_2_stage_2bits := AM_pipe_reg_2_stage_2bits_reg
-  when(W630){
+  when(W648){
     AM_pipe_reg_2_stage_2bits_reg := AM_mem_read_data_mux_regfile_0_read_port_num_2
   }
   val AM_pipe_reg_3_stage_2isNotJmp_reg = Reg(init = Bool(false))
   AM_pipe_reg_3_stage_2isNotJmp := AM_pipe_reg_3_stage_2isNotJmp_reg
-  when(W632){
+  when(W650){
     AM_pipe_reg_3_stage_2isNotJmp_reg := W45
   }
   val AM_pipe_reg_4_stage_0pcPlus4_reg = Reg(init = Bits(1))
   AM_pipe_reg_4_stage_0pcPlus4 := AM_pipe_reg_4_stage_0pcPlus4_reg
-  when(W588){
+  when(W606){
     AM_pipe_reg_4_stage_0pcPlus4_reg := W47
   }
   val AM_pipe_reg_5_stage_1pcPlus4_reg = Reg(init = Bits(1))
   AM_pipe_reg_5_stage_1pcPlus4 := AM_pipe_reg_5_stage_1pcPlus4_reg
-  when(W592){
+  when(W610){
     AM_pipe_reg_5_stage_1pcPlus4_reg := AM_pipe_reg_4_stage_0pcPlus4
   }
   val AM_pipe_reg_6_stage_2pcPlus4_reg = Reg(init = Bits(1))
   AM_pipe_reg_6_stage_2pcPlus4 := AM_pipe_reg_6_stage_2pcPlus4_reg
-  when(W634){
+  when(W652){
     AM_pipe_reg_6_stage_2pcPlus4_reg := AM_pipe_reg_5_stage_1pcPlus4
   }
   val AM_pipe_reg_7_stage_2isJmp_reg = Reg(init = Bool(false))
   AM_pipe_reg_7_stage_2isJmp := AM_pipe_reg_7_stage_2isJmp_reg
-  when(W636){
+  when(W654){
     AM_pipe_reg_7_stage_2isJmp_reg := W51
   }
   val AM_pipe_reg_8_stage_2jmpTarget_reg = Reg(init = Bits(1))
   AM_pipe_reg_8_stage_2jmpTarget := AM_pipe_reg_8_stage_2jmpTarget_reg
-  when(W638){
+  when(W656){
     AM_pipe_reg_8_stage_2jmpTarget_reg := W53
   }
   val AM_pipe_reg_9_stage_2rd_reg = Reg(init = Bits(1))
   AM_pipe_reg_9_stage_2rd := AM_pipe_reg_9_stage_2rd_reg
-  when(W640){
+  when(W658){
     AM_pipe_reg_9_stage_2rd_reg := W55
   }
   val AM_pipe_reg_10_stage_2adderSel_reg = Reg(init = Bool(false))
   AM_pipe_reg_10_stage_2adderSel := AM_pipe_reg_10_stage_2adderSel_reg
-  when(W642){
+  when(W660){
     AM_pipe_reg_10_stage_2adderSel_reg := W57
   }
   val AM_pipe_reg_11_stage_2subtractSel_reg = Reg(init = Bool(false))
   AM_pipe_reg_11_stage_2subtractSel := AM_pipe_reg_11_stage_2subtractSel_reg
-  when(W644){
+  when(W662){
     AM_pipe_reg_11_stage_2subtractSel_reg := W59
   }
   val AM_pipe_reg_12_stage_1isLoad_reg = Reg(init = Bool(false))
   AM_pipe_reg_12_stage_1isLoad := AM_pipe_reg_12_stage_1isLoad_reg
-  when(W594){
+  when(W612){
     AM_pipe_reg_12_stage_1isLoad_reg := W61
   }
   val AM_pipe_reg_13_stage_2reqValid_reg = Reg(init = Bool(false))
   AM_pipe_reg_13_stage_2reqValid := AM_pipe_reg_13_stage_2reqValid_reg
-  when(W646){
+  when(W664){
     AM_pipe_reg_13_stage_2reqValid_reg := W63
   }
   val AM_pipe_reg_14_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_14_stage_1 := AM_pipe_reg_14_stage_1_reg
-  when(W596){
+  when(W614){
     AM_pipe_reg_14_stage_1_reg := W65
   }
   val AM_pipe_reg_15_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_15_stage_1 := AM_pipe_reg_15_stage_1_reg
-  when(W598){
+  when(W616){
     AM_pipe_reg_15_stage_1_reg := W67
   }
   val AM_pipe_reg_16_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_16_stage_1 := AM_pipe_reg_16_stage_1_reg
-  when(W600){
+  when(W618){
     AM_pipe_reg_16_stage_1_reg := W69
   }
   val AM_pipe_reg_17_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_17_stage_1 := AM_pipe_reg_17_stage_1_reg
-  when(W602){
+  when(W620){
     AM_pipe_reg_17_stage_1_reg := W71
   }
   val AM_pipe_reg_18_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_18_stage_1 := AM_pipe_reg_18_stage_1_reg
-  when(W604){
+  when(W622){
     AM_pipe_reg_18_stage_1_reg := W73
   }
   val AM_pipe_reg_19_stage_1imm_reg = Reg(init = Bits(1))
   AM_pipe_reg_19_stage_1imm := AM_pipe_reg_19_stage_1imm_reg
-  when(W606){
+  when(W624){
     AM_pipe_reg_19_stage_1imm_reg := W75
   }
   val AM_pipe_reg_20_stage_0inst_reg = Reg(init = Bits(1))
   AM_pipe_reg_20_stage_0inst := AM_pipe_reg_20_stage_0inst_reg
-  when(W590){
+  when(W608){
     AM_pipe_reg_20_stage_0inst_reg := W77
   }
   val AM_pipe_reg_21_stage_2W30_reg = Reg(init = Bits(1))
   AM_pipe_reg_21_stage_2W30 := AM_pipe_reg_21_stage_2W30_reg
-  when(W648){
+  when(W666){
     AM_pipe_reg_21_stage_2W30_reg := W79
   }
   val AM_pipe_reg_22_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_22_stage_1 := AM_pipe_reg_22_stage_1_reg
-  when(W608){
+  when(W626){
     AM_pipe_reg_22_stage_1_reg := W81
   }
   val AM_pipe_reg_23_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_23_stage_1 := AM_pipe_reg_23_stage_1_reg
-  when(W610){
+  when(W628){
     AM_pipe_reg_23_stage_1_reg := W83
   }
   val AM_pipe_reg_24_stage_2_reg = Reg(init = Bool(false))
   AM_pipe_reg_24_stage_2 := AM_pipe_reg_24_stage_2_reg
-  when(W650){
+  when(W668){
     AM_pipe_reg_24_stage_2_reg := W85
   }
   val AM_pipe_reg_25_stage_2_reg = Reg(init = Bits(1))
   AM_pipe_reg_25_stage_2 := AM_pipe_reg_25_stage_2_reg
-  when(W652){
+  when(W670){
     AM_pipe_reg_25_stage_2_reg := W87
   }
   val AM_pipe_reg_26_stage_2_reg = Reg(init = Bool(false))
   AM_pipe_reg_26_stage_2 := AM_pipe_reg_26_stage_2_reg
-  when(W654){
+  when(W672){
     AM_pipe_reg_26_stage_2_reg := W89
   }
   val AM_pipe_reg_27_stage_2_reg = Reg(init = Bits(1))
   AM_pipe_reg_27_stage_2 := AM_pipe_reg_27_stage_2_reg
-  when(W656){
+  when(W674){
     AM_pipe_reg_27_stage_2_reg := W91
   }
   val AM_pipe_reg_28_stage_2_reg = Reg(init = Bits(1))
   AM_pipe_reg_28_stage_2 := AM_pipe_reg_28_stage_2_reg
-  when(W658){
+  when(W676){
     AM_pipe_reg_28_stage_2_reg := W93
   }
   val AM_pipe_reg_29_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_29_stage_1 := AM_pipe_reg_29_stage_1_reg
-  when(W612){
+  when(W630){
     AM_pipe_reg_29_stage_1_reg := W95
   }
   val AM_pipe_reg_30_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_30_stage_1 := AM_pipe_reg_30_stage_1_reg
-  when(W614){
+  when(W632){
     AM_pipe_reg_30_stage_1_reg := W97
   }
   val AM_pipe_reg_31_stage_1W15_reg = Reg(init = Bool(false))
   AM_pipe_reg_31_stage_1W15 := AM_pipe_reg_31_stage_1W15_reg
-  when(W616){
+  when(W634){
     AM_pipe_reg_31_stage_1W15_reg := W99
   }
   val AM_pipe_reg_32_stage_1W17_reg = Reg(init = Bool(false))
   AM_pipe_reg_32_stage_1W17 := AM_pipe_reg_32_stage_1W17_reg
-  when(W618){
+  when(W636){
     AM_pipe_reg_32_stage_1W17_reg := W101
   }
   val AM_pipe_reg_33_stage_1isStore_reg = Reg(init = Bool(false))
   AM_pipe_reg_33_stage_1isStore := AM_pipe_reg_33_stage_1isStore_reg
-  when(W620){
+  when(W638){
     AM_pipe_reg_33_stage_1isStore_reg := W103
   }
   val AM_pipe_reg_34_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_34_stage_1 := AM_pipe_reg_34_stage_1_reg
-  when(W622){
+  when(W640){
     AM_pipe_reg_34_stage_1_reg := W105
   }
   val AM_pipe_reg_35_stage_1_reg = Reg(init = Bits(1))
   AM_pipe_reg_35_stage_1 := AM_pipe_reg_35_stage_1_reg
-  when(W624){
+  when(W642){
     AM_pipe_reg_35_stage_1_reg := W107
   }
   val pcReg_1_reg = Reg(init = Bits(0, width = 4))
@@ -2031,10 +2067,10 @@ class Cpu extends Module {
   }
   val AM_thread_sel_counter_reg = Reg(init = Bits(0, width = 3))
   AM_thread_sel_counter := AM_thread_sel_counter_reg
-  when(W672){
+  when(W690){
     AM_thread_sel_counter_reg := W211
   }
-  when(W674){
+  when(W692){
     AM_thread_sel_counter_reg := W215
   }
 }

@@ -182,7 +182,7 @@ class CpuTestHarness extends Module {
   }
 
   val DUT = Module(new Cpu )
-  val ICache = Module(new ICache)
+  val ICache = Module(new ICache(10, 4))
   val DCache = Module(new DCache(10, 10))
   val testBench = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
   
@@ -204,7 +204,7 @@ class CpuTestHarness extends Module {
   }
 
   val DUT0 = Module(new Cpu )
-  val ICache0 = Module(new ICache)
+  val ICache0 = Module(new ICache(10, 4))
   val DCache0 = Module(new DCache)
   val testBench0 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
   
@@ -215,7 +215,7 @@ class CpuTestHarness extends Module {
   DUT0.io.readData <> testBench0.io.readData
 
   val DUT1 = Module(new Cpu )
-  val ICache1 = Module(new ICache)
+  val ICache1 = Module(new ICache(10, 4))
   val DCache1 = Module(new DCache)
   val testBench1 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6).reverse, Array(2, 3, 5, 3, 3, 3, 6).reverse, 0))
   
@@ -237,7 +237,7 @@ class CpuTestHarness extends Module {
   }
 
   val DUT = Module(new Cpu )
-  val ICache0 = Module(new ICache)
+  val ICache0 = Module(new ICache(10, 7))
   val DCache0 = Module(new DCache(10, 7))
   val testBench0 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
   
@@ -247,7 +247,7 @@ class CpuTestHarness extends Module {
   DUT.io.readAddr_0 <> testBench0.io.readAddr
   DUT.io.readData_0 <> testBench0.io.readData
 
-  val ICache1 = Module(new ICache)
+  val ICache1 = Module(new ICache(10, 4))
   val DCache1 = Module(new DCache(10, 4))
   val testBench1 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6).reverse, Array(2, 3, 5, 3, 3, 3, 6).reverse, 0))
   
@@ -257,7 +257,7 @@ class CpuTestHarness extends Module {
   DUT.io.readAddr_1 <> testBench1.io.readAddr
   DUT.io.readData_1 <> testBench1.io.readData
 
-  val ICache2 = Module(new ICache)
+  val ICache2 = Module(new ICache(10, 8))
   val DCache2 = Module(new DCache(10, 8))
   val testBench2 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
   
@@ -268,7 +268,7 @@ class CpuTestHarness extends Module {
   DUT.io.readData_2 <> testBench2.io.readData
 
 
-  val ICache3 = Module(new ICache)
+  val ICache3 = Module(new ICache(10, 3))
   val DCache3 = Module(new DCache(10, 3))
   val testBench3 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6).reverse, Array(2, 3, 5, 3, 3, 3, 6).reverse, 0))
   

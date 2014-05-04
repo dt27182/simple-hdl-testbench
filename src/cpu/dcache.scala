@@ -4,7 +4,7 @@ import Chisel._
 import scala.collection.mutable.HashMap
 import Common._
 
-class DCache(missLatency: Int = 0, lfsrWait: Int = 0) extends Module {
+/*class DCache(missLatency: Int = 0, lfsrWait: Int = 0) extends Module {
   val io = new VarLatIO(43,32).flip()
 
   val doWrite = io.reqBits(42)
@@ -41,6 +41,23 @@ class DCache(missLatency: Int = 0, lfsrWait: Int = 0) extends Module {
 
   val mem = Mem(Bits(width = 32), 1024)
     when(io.reqValid && doWrite && currentState === idle){
+    mem.write(reqAddr, writeData)
+  }
+
+  io.respBits := mem.read(reqAddr)
+}*/
+
+class DCache(missLatency: Int = 0, lfsrWait: Int = 0) extends Module {
+  val io = new VarLatIO(43,32).flip()
+
+  val doWrite = io.reqBits(42)
+  val reqAddr = io.reqBits(41, 32)
+  val writeData = io.reqBits(31, 0)
+
+  io.respPending := Bool(false)
+
+  val mem = Mem(Bits(width = 32), 1024)
+  when(io.reqValid && doWrite){
     mem.write(reqAddr, writeData)
   }
 
