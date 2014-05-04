@@ -28,11 +28,11 @@ vclibsrcs = \
 
 srcdir = $(basedir)/build/generated-src
 vsrcs = \
-	$(srcdir)/FSM.v
+	$(srcdir)/Cpu.v
 
 # Specify what the toplevel verilog module is
 
-toplevel = FSM
+toplevel = Cpu
 testharness = gcdTestHarness_rtl
 toplevelinst = gcd
 

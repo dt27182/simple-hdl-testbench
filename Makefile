@@ -17,7 +17,7 @@ generate-cpu-src: ../simple-hdl-proj/src/cpu/cpu.scala ../simple-hdl-proj/src
 	cd ../simple-hdl-proj && sbt "project cpu" "run"
 
 verilog:
-	sbt "project fsm" "run --backend Chisel.Fame5VerilogBackend --targetDir generated"
+	sbt "project cpu" "run -vbuild --targetDir generated"
 
 clean:
 	sbt "project chisel" clean
