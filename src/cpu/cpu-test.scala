@@ -236,7 +236,7 @@ class CpuTestHarness extends Module {
     val failed = Bool(OUTPUT)
   }
 
-  val DUT = Module(new Cpu )
+/*  val DUT = Module(new Cpu )
   val ICache0 = Module(new ICache(10, 7))
   val DCache0 = Module(new DCache(10, 7))
   val testBench0 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
@@ -282,7 +282,7 @@ class CpuTestHarness extends Module {
   io.failed := testBench0.io.failed || testBench1.io.failed || testBench2.io.failed || testBench3.io.failed
 
   //io.passed := testBench0.io.passed && testBench1.io.passed
-  //io.failed := testBench0.io.failed || testBench1.io.failed
+  //io.failed := testBench0.io.failed || testBench1.io.failed*/
 }
 
 
