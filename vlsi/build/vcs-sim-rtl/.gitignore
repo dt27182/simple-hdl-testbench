@@ -11,3 +11,4 @@ timestamp
 *.cmd
 *.daidir
 kernel
+*.a

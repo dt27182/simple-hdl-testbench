@@ -10,6 +10,5 @@ timestamp
 *.log
 *.cmd
 *.daidir
-*.saif
-*.vcd
-sdfAnnotateInfo
+*.a
+*.ucli
