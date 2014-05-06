@@ -49,12 +49,14 @@ set_ungroup [get_designs HellaCache] false
 set_isolate_ports [all_outputs] -type buffer
 set_isolate_ports [remove_from_collection [all_inputs] clk] -type buffer -force
 
-set_optimize_registers true -design IntToFP -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
-set_optimize_registers true -design FPUFMAPipe_0 -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
-set_optimize_registers true -design FPUFMAPipe_1 -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
-set_optimize_registers true -design LaneMul -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
-set_optimize_registers true -design LaneConv -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
-set_optimize_registers true -design LaneFMA -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
+set_optimize_registers true -design Cpu -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
+
+#set_optimize_registers true -design IntToFP -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
+#set_optimize_registers true -design FPUFMAPipe_0 -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
+#set_optimize_registers true -design FPUFMAPipe_1 -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
+#set_optimize_registers true -design LaneMul -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
+#set_optimize_registers true -design LaneConv -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
+#set_optimize_registers true -design LaneFMA -clock clk -check_design -verbose -print_critical_loop -justification_effort high -minimum_period_only -sync_transform decompose
 
 #set_optimize_registers true -design IntToFP -clock clk -check_design -verbose -print_critical_loop
 #set_optimize_registers true -design FPUFMAPipe_0 -clock clk -check_design -verbose -print_critical_loop

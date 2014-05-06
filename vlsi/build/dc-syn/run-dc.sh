@@ -14,7 +14,7 @@ done
 
 for i in `seq 1 4`;
 do
-  for j in `seq $i 4`;
+  for j in `seq 1 $i`;
   do
     for k in `seq 0 0`;
     do
