@@ -27,7 +27,7 @@ clean:
 	rm -f emulator/*.o
 	rm -rf target
 	rm -f emulator/Hello
-	rm *.vpd
-	rm *.vcd
-	rm generated/*.v
+	rm -f *.vpd
+	rm -f *.vcd
+	rm -f generated/*.v
 	
