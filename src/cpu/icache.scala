@@ -82,7 +82,7 @@ class ICache(missLatency: Int = 0, lfsrWait: Int = 0) extends Module
   imem(12) := Cat(Bits(0,16), Bits(0,4), Bits(5,4), Bits(3,4), Bits(6,4)) //r6 = r3 + r5
   imem(13) := Cat(Bits(0,16), Bits(5,4), Bits(0,4), Bits(15,4), Bits(0,4)) //nop
   imem(14) := Cat(Bits(0,16), Bits(7,4), Bits(0,4), Bits(15,4), Bits(0,4)) //service exteral reg read
-  imem(15) := Cat(Bits(14,16), Bits(6,4), Bits(0,4), Bits(15,4), Bits(0,4)) //jump to PC = 14(stop execution here)
+  imem(15) := Cat(Bits(0,16), Bits(6,4), Bits(0,4), Bits(15,4), Bits(0,4)) //jump to PC = 14(stop execution here)
   
   val idle :: miss :: Nil = Enum(UInt(), 2)
   val currentState = Reg(init = idle)
@@ -98,19 +98,31 @@ class ICache(missLatency: Int = 0, lfsrWait: Int = 0) extends Module
   val mem_addr = io.reqBits
   io.respBits := imem(mem_addr)
   io.respPending := Bool(false)
-  when(currentState === idle){
-    when(io.reqValid && lfsr(0).toBool && mem_addr != lastMissAddr){
-      io.respPending := Bool(true)
-      currentState := miss
-      lastMissAddr := mem_addr
+  currentState := currentState
+  lastMissAddr := lastMissAddr
+  missCounter := missCounter
+  if(missLatency == 1){
+    when(currentState === idle){
+      when(io.reqValid && lfsr(0).toBool && mem_addr != lastMissAddr){
+        io.respPending := Bool(true)
+        lastMissAddr := mem_addr
+      }
     }
-  } .elsewhen(currentState === miss){
-    io.respPending := Bool(true)
-    when(missCounter === UInt(missLatency)){
-      currentState := idle
-      missCounter := UInt(0)
-    }.otherwise{
-      missCounter := missCounter + UInt(1)
+  } else if(missLatency > 1){
+    when(currentState === idle){
+      when(io.reqValid && lfsr(0).toBool && mem_addr != lastMissAddr){
+        io.respPending := Bool(true)
+        currentState := miss
+        lastMissAddr := mem_addr
+      }
+    }.elsewhen(currentState === miss){
+      io.respPending := Bool(true)
+      when(missCounter === UInt(missLatency-2)){
+        currentState := idle
+        missCounter := UInt(0)
+      }.otherwise{
+        missCounter := missCounter + UInt(1)
+      }
     }
   }
 }

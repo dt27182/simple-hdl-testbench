@@ -3,6 +3,7 @@ package Cpu
 import Chisel._ 
 import scala.collection.mutable.HashMap
 import Common._
+import scala.collection.mutable.ArrayBuffer
 
 /*
 class Cpu extends Module {
@@ -133,13 +134,15 @@ class CpuTestBench(outputAddrs: Array[Int], inputData: Array[Int], waitCycles: I
   io.failed := Bool(false)
 
   for(i <- 0 until waitCycles) {
-    when(outputState === UInt(i) && fire){
+    //when(outputState === UInt(i) && fire){
+    when(outputState === UInt(i)){
       outputState := UInt(i + 1)
     }
   }
 
   for(i <- waitCycles until waitCycles + outputAddrs.length){
-    when(outputState === UInt(i) && fire){
+    //when(outputState === UInt(i) && fire){
+    when(outputState === UInt(i)){
       io.readAddr.valid := Bool(true)
       io.readAddr.bits := Bits(outputAddrs(i - waitCycles))
       when(io.readAddr.ready){
@@ -150,7 +153,8 @@ class CpuTestBench(outputAddrs: Array[Int], inputData: Array[Int], waitCycles: I
   
   //inputData.length is the passed state, inputData.length + 1 is the failed state
   for(i <- 0 until inputData.length){
-    when(inputState === UInt(i) && fire){
+    //when(inputState === UInt(i) && fire){
+    when(inputState === UInt(i)){
       io.readData.ready := Bool(true)
       when(io.readData.valid){
         when(io.readData.bits === UInt(inputData(i))){
@@ -230,13 +234,13 @@ class CpuTestHarness extends Module {
 }*/
 
 //multithread test harness with 1 2thread cpu
-class CpuTestHarness extends Module {
+/*class CpuTestHarness extends Module {
   val io = new Bundle {
     val passed = Bool(OUTPUT)
     val failed = Bool(OUTPUT)
   }
 
-/*  val DUT = Module(new Cpu )
+  val DUT = Module(new Cpu )
   val ICache0 = Module(new ICache(10, 7))
   val DCache0 = Module(new DCache(10, 7))
   val testBench0 = Module(new CpuTestBench(Array(0, 1, 2, 3, 4, 5, 6), Array(2, 3, 5, 3, 3, 3, 6), 0))
@@ -282,9 +286,8 @@ class CpuTestHarness extends Module {
   io.failed := testBench0.io.failed || testBench1.io.failed || testBench2.io.failed || testBench3.io.failed
 
   //io.passed := testBench0.io.passed && testBench1.io.passed
-  //io.failed := testBench0.io.failed || testBench1.io.failed*/
-}
-
+  //io.failed := testBench0.io.failed || testBench1.io.failed
+}*/
 
 class CpuTests(c: CpuTestHarness) extends Tester(c, Array(c.io)) {
   defTests {
@@ -292,9 +295,11 @@ class CpuTests(c: CpuTestHarness) extends Tester(c, Array(c.io)) {
     val ovars = new HashMap[Node, Node] ()
     var done = false
     var passed = true
+    var cycles = 0
     while(!done){
       //vars(c.io.failed) = Bool(false)
       step(vars, ovars)
+      cycles = cycles + 1
       if(ovars(c.io.passed).name == "0x1"){
         done = true
       }
@@ -303,6 +308,7 @@ class CpuTests(c: CpuTestHarness) extends Tester(c, Array(c.io)) {
         done = true
       }
     }
+    println("Cycle Count: " + cycles)
     passed
   }
 }
@@ -313,8 +319,12 @@ object CpuProj {
       chiselMain(args.slice(1,args.length) ++ Array("--backend", "v"), () => Module(new Cpu()))
     } else if(args(0) == "-backannotation"){
       chiselMain(args.slice(1,args.length) ++ Array("--backend", "MyBackend.MyBackend"), () => Module(new Cpu()))
+    } else if(args(0) == "-ctest"){
+      chiselMainTest(args.slice(3, args.length), () => Module(new CpuTestHarness(args(1).toInt, args(2).toInt))) {
+        c => new CpuTests(c)
+      }
     } else {
-      chiselMainTest(args, () => Module(new CpuTestHarness())) {
+      chiselMainTest(args, () => Module(new CpuTestHarness(4, 10))) {
         c => new CpuTests(c)
       }
     }

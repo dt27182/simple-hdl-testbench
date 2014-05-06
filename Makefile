@@ -8,7 +8,7 @@ gen-src:
 	cd ../simple-hdl-proj && sbt "project fsm" "run"
 
 run-cpu: copy-cpu-src
-	sbt "project cpu" "run --backend c --genHarness --compile --test --vcd --debug --targetDir emulator";vcd2vpd CpuTestHarness.vcd CpuTestHarness.vcd.vpd
+	sbt "project cpu" "run -ctest 4 20 --backend c --genHarness --compile --test --vcd --debug --targetDir emulator";vcd2vpd CpuTestHarness.vcd CpuTestHarness.vcd.vpd
 
 copy-cpu-src: generate-cpu-src 
 	cp ../simple-hdl-proj/generated/Cpu.scala src/cpu/.
@@ -27,7 +27,7 @@ clean:
 	rm -f emulator/*.o
 	rm -rf target
 	rm -f emulator/Hello
-	rm *.vpd
-	rm *.vcd
-	rm generated/*.v
+	rm -f *.vpd
+	rm -f *.vcd
+	rm -f generated/*.v
 	
