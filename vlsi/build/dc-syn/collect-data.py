@@ -23,14 +23,14 @@ for i in range(0, 4):
     dynamicAreas[i].append("n/a")
 
 #find fixed areas from reports
-"""for i in range(0, 4):
+for i in range(0, 4):
   for j in range(0, i + 1):
     folderName = "reports" + str(i + 1) + str(j + 1) + str(0)
     areaReport = open(dirName + folderName + "/Cpu.mapped.area.rpt")
     for line in areaReport.readlines():
       words = re.split('\s+', line)
       if words[0] == "Total" and words[1] == "cell" and words[2] == "area:":
-        fixedAreas[i][j] = float(words[3])"""
+        fixedAreas[i][j] = float(words[3])
 
 
 #find dynamic areas from reports
@@ -45,16 +45,16 @@ for i in range(0, 4):
 
 #find fixed cycle times from reports
 for i in range(0, 4):
-  for j in range(0, 4):
-    folderName = "reports" + str(i + 1) + str(j + 1) + str(1)
+  for j in range(0, i + 1):
+    folderName = "reports" + str(i + 1) + str(j + 1) + str(0)
     timingReport = open(dirName + folderName + "/Cpu.mapped.timing.rpt")
-    dynamicCycleTimes[i][j] = 0.0
+    fixedCycleTimes[i][j] = 0.0
     for line in timingReport.readlines():
       words = re.split('\s+', line)
       if words[1] == "data" and words[2] == "arrival" and words[3] == "time":
         print(-float(words[4]))
         if ((-float(words[4])) > dynamicCycleTimes[i][j]):
-          dynamicCycleTimes[i][j] = -float(words[4])
+          fixedCycleTimes[i][j] = -float(words[4])
 
 #find dynamic cycle times from reports
 for i in range(0, 4):
