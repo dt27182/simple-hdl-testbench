@@ -10,3 +10,5 @@ generated/*
 vlsi/build/generated-src/*
 project/target
 *.swp
+*.rpt
+*.csv
