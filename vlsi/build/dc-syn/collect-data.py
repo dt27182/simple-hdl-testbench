@@ -2,7 +2,7 @@ import os
 import sys
 import re
 
-dirName = "/home/eecs/wenyu/multithread-transform/simple-hdl-testbench/vlsi/build/dc-syn//"
+dirName = "/home/eecs/wenyu/multithread-transform/simple-hdl-testbench/vlsi/build/dc-syn/"
 
 #results arrays
 fixedCycleTimes = []
